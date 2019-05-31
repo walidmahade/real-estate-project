@@ -2,6 +2,13 @@ $(document).ready(function() {
     /*==========================================
             global scripts: (for all page)
     ===========================================*/
+    /*--- initialize popovers ---*/
+    $('[data-toggle="popover"]').popover()
+    /*--- dismiss popovers ---*/
+    $('.popover-dismiss').popover({
+        trigger: 'focus'
+    });
+    /*--- add header offset ---*/
     let headerOffsetTarget = $("[data-js-header-offset]");
     // console.log(headerOffsetTarget.length);
     if ( headerOffsetTarget.length > 0 ) {

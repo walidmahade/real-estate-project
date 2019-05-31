@@ -888,7 +888,61 @@
 
             <div class="col-12 col-lg-6 n-l-right-col">
                 <div id="nearby-location-map">
-                    <img src="img/nearby-location.jpg" alt="" class="img-fluid">
+                    <!-- nearby-location-item -->
+                    <div class="nearby-location-item" data-id="1">
+                        <a tabindex="0" class="nearby-location-item__popovers" role="button"
+                           data-toggle="popover" data-trigger="focus" data-placement="top"
+                           data-content="The Dairy Godmother" data-offset="0, 2">
+                            <img src="img/nearby-locations-icon.png" alt="">
+                        </a>
+                    </div>
+                    <!-- nearby-location-item  end -->
+                    <!-- nearby-location-item -->
+                    <div class="nearby-location-item" data-id="2">
+                        <a tabindex="0" class="nearby-location-item__popovers" role="button"
+                           data-toggle="popover" data-trigger="focus" data-placement="top"
+                           data-content="The Dairy Godmother" data-offset="0, 2">
+                            <img src="img/nearby-locations-icon.png" alt="">
+                        </a>
+                    </div>
+                    <!-- nearby-location-item  end -->
+                    <!-- nearby-location-item -->
+                    <div class="nearby-location-item" data-id="3">
+                        <a tabindex="0" class="nearby-location-item__popovers" role="button"
+                           data-toggle="popover" data-trigger="focus" data-placement="top"
+                           data-content="The Dairy Godmother" data-offset="0, 2">
+                            <img src="img/nearby-locations-icon.png" alt="">
+                        </a>
+                    </div>
+                    <!-- nearby-location-item  end -->
+                    <!-- nearby-location-item -->
+                    <div class="nearby-location-item" data-id="4">
+                        <a tabindex="0" class="nearby-location-item__popovers" role="button"
+                           data-toggle="popover" data-trigger="focus" data-placement="top"
+                           data-content="The Dairy Godmother" data-offset="0, 2">
+                            <img src="img/nearby-locations-icon.png" alt="">
+                        </a>
+                    </div>
+                    <!-- nearby-location-item  end -->
+                    <!-- nearby-location-item -->
+                    <div class="nearby-location-item" data-id="5">
+                        <a tabindex="0" class="nearby-location-item__popovers" role="button"
+                           data-toggle="popover" data-trigger="focus" data-placement="top"
+                           data-content="The Dairy Godmother" data-offset="0, 2">
+                            <img src="img/nearby-locations-icon.png" alt="">
+                        </a>
+                    </div>
+                    <!-- nearby-location-item  end -->
+                    <!-- nearby-location-item -->
+                    <div class="nearby-location-item" data-id="6">
+                        <a tabindex="0" class="nearby-location-item__popovers" role="button"
+                           data-toggle="popover" data-trigger="focus" data-placement="top"
+                           data-content="The Dairy Godmother" data-offset="0, 2">
+                            <img src="img/nearby-locations-icon.png" alt="">
+                        </a>
+                    </div>
+                    <!-- nearby-location-item  end -->
+                    <div class="bg-overlay"></div>
                 </div>
             </div>
         </div>
@@ -1206,83 +1260,83 @@
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="js/main.js"></script>
 
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpUU0Y71N721R-TR8Ie69VJ7hMobM0jdo&callback=initMap">
-</script>
-<script>
-    // This example displays a marker at the center of Australia.
-    // When the user clicks the marker, an info window opens.
-    // The maximum width of the info window is set to 200 pixels.
+<!--<script async defer-->
+<!--        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpUU0Y71N721R-TR8Ie69VJ7hMobM0jdo&callback=initMap">-->
+<!--</script>-->
+<!--<script>-->
+<!--    // This example displays a marker at the center of Australia.-->
+<!--    // When the user clicks the marker, an info window opens.-->
+<!--    // The maximum width of the info window is set to 200 pixels.-->
 
-    function initMap() {
-        let uluru = {lat: -25.363, lng: 131.044};
+<!--    function initMap() {-->
+<!--        let uluru = {lat: -25.363, lng: 131.044};-->
 
-        let map = new google.maps.Map(document.getElementById('map'), {
-            center: new google.maps.LatLng(-33.91722, 151.23064),
-            zoom: 16
-        });
+<!--        let map = new google.maps.Map(document.getElementById('map'), {-->
+<!--            center: new google.maps.LatLng(-33.91722, 151.23064),-->
+<!--            zoom: 16-->
+<!--        });-->
 
-        let locations = [
-            {
-                position: new google.maps.LatLng(-33.91721, 151.22630),
-                type: 'info'
-            }, {
-                position: new google.maps.LatLng(-33.91539, 151.22820),
-                type: 'info'
-            }, {
-                position: new google.maps.LatLng(-33.91747, 151.22912),
-                type: 'info'
-            }, {
-                position: new google.maps.LatLng(-33.91910, 151.22907),
-                type: 'info'
-            }
-        ];
+<!--        let locations = [-->
+<!--            {-->
+<!--                position: new google.maps.LatLng(-33.91721, 151.22630),-->
+<!--                type: 'info'-->
+<!--            }, {-->
+<!--                position: new google.maps.LatLng(-33.91539, 151.22820),-->
+<!--                type: 'info'-->
+<!--            }, {-->
+<!--                position: new google.maps.LatLng(-33.91747, 151.22912),-->
+<!--                type: 'info'-->
+<!--            }, {-->
+<!--                position: new google.maps.LatLng(-33.91910, 151.22907),-->
+<!--                type: 'info'-->
+<!--            }-->
+<!--        ];-->
 
-        // Create markers.
-        for (let i = 0; i < locations.length; i++) {
-            let marker = new google.maps.Marker({
-                position: features[i].position,
-                // icon: icons[features[i].type].icon,
-                map: map
-            });
-        };
+<!--        // Create markers.-->
+<!--        for (let i = 0; i < locations.length; i++) {-->
+<!--            let marker = new google.maps.Marker({-->
+<!--                position: features[i].position,-->
+<!--                // icon: icons[features[i].type].icon,-->
+<!--                map: map-->
+<!--            });-->
+<!--        };-->
 
-        let contentString = '<div id="content">'+
-            '<div id="siteNotice">'+
-            '</div>'+
-            '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
-            '<div id="bodyContent">'+
-            '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-            'sandstone rock formation in the southern part of the '+
-            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
-            'south west of the nearest large town, Alice Springs; 450&#160;km '+
-            '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
-            'features of the Uluru - Kata Tjuta National Park. Uluru is '+
-            'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
-            'Aboriginal people of the area. It has many springs, waterholes, '+
-            'rock caves and ancient paintings. Uluru is listed as a World '+
-            'Heritage Site.</p>'+
-            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-            'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-            '(last visited June 22, 2009).</p>'+
-            '</div>'+
-            '</div>';
+<!--        let contentString = '<div id="content">'+-->
+<!--            '<div id="siteNotice">'+-->
+<!--            '</div>'+-->
+<!--            '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+-->
+<!--            '<div id="bodyContent">'+-->
+<!--            '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +-->
+<!--            'sandstone rock formation in the southern part of the '+-->
+<!--            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+-->
+<!--            'south west of the nearest large town, Alice Springs; 450&#160;km '+-->
+<!--            '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+-->
+<!--            'features of the Uluru - Kata Tjuta National Park. Uluru is '+-->
+<!--            'sacred to the Pitjantjatjara and Yankunytjatjara, the '+-->
+<!--            'Aboriginal people of the area. It has many springs, waterholes, '+-->
+<!--            'rock caves and ancient paintings. Uluru is listed as a World '+-->
+<!--            'Heritage Site.</p>'+-->
+<!--            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+-->
+<!--            'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+-->
+<!--            '(last visited June 22, 2009).</p>'+-->
+<!--            '</div>'+-->
+<!--            '</div>';-->
 
-        // let infowindow = new google.maps.InfoWindow({
-        //     content: contentString,
-        //     maxWidth: 300
-        // });
+<!--        // let infowindow = new google.maps.InfoWindow({-->
+<!--        //     content: contentString,-->
+<!--        //     maxWidth: 300-->
+<!--        // });-->
 
-        // let marker = new google.maps.Marker({
-        //     position: uluru,
-        //     map: map,
-        //     title: 'Uluru (Ayers Rock)'
-        // });
-        // marker.addListener('click', function() {
-        //     infowindow.open(map, marker);
-        // });
-    }
-</script>
+<!--        // let marker = new google.maps.Marker({-->
+<!--        //     position: uluru,-->
+<!--        //     map: map,-->
+<!--        //     title: 'Uluru (Ayers Rock)'-->
+<!--        // });-->
+<!--        // marker.addListener('click', function() {-->
+<!--        //     infowindow.open(map, marker);-->
+<!--        // });-->
+<!--    }-->
+<!--</script>-->
 
 </body>
 </html>

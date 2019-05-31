@@ -9340,6 +9340,48 @@ p {
     -webkit-box-shadow: 0 10px 30px 0 rgba(36, 49, 101, 0.08);
     box-shadow: 0 10px 30px 0 rgba(36, 49, 101, 0.08); }
 
+.bg-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  z-index: 1; }
+
+/*---- nearby locations item ---*/
+.nearby-location-item {
+  z-index: 9;
+  position: absolute; }
+  .nearby-location-item__popovers:focus {
+    outline: none; }
+  .nearby-location-item[data-id="1"] {
+    top: 20%;
+    left: 20%; }
+  .nearby-location-item[data-id="2"] {
+    top: 50%;
+    left: 40%; }
+  .nearby-location-item[data-id="3"] {
+    top: 75%;
+    left: 60%; }
+  .nearby-location-item[data-id="4"] {
+    top: 13%;
+    left: 50%; }
+  .nearby-location-item[data-id="5"] {
+    top: 35%;
+    left: 80%; }
+  .nearby-location-item[data-id="6"] {
+    top: 75%;
+    left: 15%; }
+
+/*--- popover border radius ---*/
+.popover {
+  border-radius: 40px;
+  padding: 7px 15px; }
+
+/*---- nearby locations item end ---*/
 .nearby-location-details {
   border-radius: 14px;
   -webkit-box-shadow: 0 10px 30px 0 rgba(36, 49, 101, 0.08);
@@ -9356,7 +9398,15 @@ p {
   .nearby-location-details .n-l-right-col {
     -webkit-box-ordinal-group: 2;
     -ms-flex-order: 1;
-    order: 1; }
+    order: 1;
+    padding-left: 0;
+    padding-right: 0; }
+    .nearby-location-details .n-l-right-col #nearby-location-map {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 400px;
+      background-image: url("../img/nearby-location.jpg"); }
     .nearby-location-details .n-l-right-col img {
       border-radius: 8px;
       padding-top: 15px; }
@@ -9423,6 +9473,8 @@ p {
     .n-l-left-col .accordion .card-header.active-acc .logo img {
       -webkit-filter: grayscale(0);
       filter: grayscale(0); }
+    .n-l-left-col .accordion .card-header.active-acc .btn:after {
+      content: '\eaa0'; }
     .n-l-left-col .accordion .card-header .btn {
       padding: 0;
       color: #3D3D3D;
@@ -9431,7 +9483,7 @@ p {
       width: 100%;
       position: static; }
       .n-l-left-col .accordion .card-header .btn:after {
-        content: '\eaa0';
+        content: '\ea99';
         font-family: IcoFont;
         font-style: normal;
         position: absolute;
@@ -9454,8 +9506,6 @@ p {
         -webkit-box-align: center;
         -ms-flex-align: center;
         align-items: center; }
-      .n-l-left-col .accordion .card-header .btn:not(.collapsed):after {
-        content: '\ea99'; }
 
 @media screen and (min-width: 992px) {
   .nearby-location-details {
@@ -9471,99 +9521,7 @@ p {
       -ms-flex-order: 2;
       order: 2; }
       .nearby-location-details .n-l-right-col img {
-        padding-top: 0; }
-  .n-l-left-col {
-    padding-left: 0;
-    max-height: 450px;
-    overflow: auto;
-    margin-top: 30px;
-    /* width */
-    /* Track */
-    /* Handle */
-    /* Handle on hover */
-    /* Handle on hover */ }
-    .n-l-left-col::-webkit-scrollbar {
-      width: 10px; }
-    .n-l-left-col::-webkit-scrollbar-track {
-      background: #ebebeb;
-      border-radius: 25px; }
-    .n-l-left-col::-webkit-scrollbar-thumb {
-      background: rgba(0, 0, 0, 0.2);
-      border-radius: 25px; }
-    .n-l-left-col::-webkit-scrollbar-thumb {
-      background: #EFB200; }
-    .n-l-left-col::-webkit-scrollbar-thumb:hover {
-      background: #EFB200; }
-    .n-l-left-col .accordion .card,
-    .n-l-left-col .accordion .card-header {
-      background-color: white;
-      border: 0;
-      padding-bottom: 0;
-      padding-top: 0; }
-    .n-l-left-col .accordion .card-body {
-      padding-bottom: 0; }
-    .n-l-left-col .accordion .card {
-      padding-left: 30px;
-      padding-right: 25px;
-      margin-bottom: 30px; }
-    .n-l-left-col .accordion .card-header {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: start;
-      -ms-flex-pack: start;
-      justify-content: flex-start;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      position: relative; }
-      .n-l-left-col .accordion .card-header .logo {
-        border-radius: 50%;
-        height: 40px;
-        width: 40px;
-        overflow: hidden;
-        margin-right: 15px; }
-        .n-l-left-col .accordion .card-header .logo img {
-          max-width: 100%;
-          display: block;
-          -webkit-filter: grayscale(1);
-          filter: grayscale(1); }
-      .n-l-left-col .accordion .card-header.active-acc .logo img {
-        -webkit-filter: grayscale(0);
-        filter: grayscale(0); }
-      .n-l-left-col .accordion .card-header .btn {
-        padding: 0;
-        color: #3D3D3D;
-        font-weight: 500;
-        font-size: 18px;
-        width: 100%;
-        position: static; }
-        .n-l-left-col .accordion .card-header .btn:after {
-          content: '\eaa0';
-          font-family: IcoFont;
-          font-style: normal;
-          position: absolute;
-          right: 0;
-          top: 50%;
-          -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-          border: 1px solid rgba(61, 61, 61, 0.5);
-          height: 26px;
-          width: 26px;
-          border-radius: 50%;
-          line-height: 1;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
-          justify-content: center;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-          align-items: center; }
-        .n-l-left-col .accordion .card-header .btn:not(.collapsed):after {
-          content: '\ea99'; } }
+        padding-top: 0; } }
 
 #mortgage-calculator {
   padding: 85px 0; }

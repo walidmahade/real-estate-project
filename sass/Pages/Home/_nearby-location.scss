@@ -15,6 +15,60 @@
   }
 }
 
+.bg-overlay {
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 0; right: 0;
+  background-color: rgba(#000, .7);
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+/*---- nearby locations item ---*/
+.nearby-location-item {
+  z-index: 9;
+  position: absolute;
+
+
+  &__popovers {
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &[data-id="1"] {
+    top: 20%;
+    left: 20%;
+  }
+  &[data-id="2"] {
+    top: 50%;
+    left: 40%;
+  }
+  &[data-id="3"] {
+    top: 75%;
+    left: 60%;
+  }
+  &[data-id="4"] {
+    top: 13%;
+    left: 50%;
+  }
+  &[data-id="5"] {
+    top: 35%;
+    left: 80%;
+  }
+  &[data-id="6"] {
+    top: 75%;
+    left: 15%;
+  }
+}
+
+/*--- popover border radius ---*/
+.popover {
+  border-radius: 40px;
+  padding: 7px 15px;
+}
+/*---- nearby locations item end ---*/
+
 .nearby-location-details {
   border-radius: 14px;
   box-shadow: 0 10px 30px 0 rgba(36, 49, 101, 0.08);
@@ -28,8 +82,18 @@
     order: 2;
   }
   .n-l-right-col {
-    //padding-right: 0;
     order: 1;
+    padding-left: 0;
+    padding-right: 0;
+
+    #nearby-location-map {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 400px;
+      background-image: url("../img/nearby-location.jpg");
+    }
+
     img {
       border-radius: 8px;
       padding-top: 15px;
@@ -118,6 +182,10 @@
             filter: grayscale(0);
           }
         }
+
+        .btn:after {
+          content: '\eaa0';
+        }
       }
 
       .btn {
@@ -130,7 +198,7 @@
         position: static;
 
         &:after {
-          content: '\eaa0';
+          content: '\ea99';
           font-family: IcoFont;
           font-style: normal;
           position: absolute;
@@ -146,11 +214,6 @@
           justify-content: center;
           align-items: center;
         } // after
-
-        &:not(.collapsed):after {
-          content: '\ea99';
-        }
-
       } // btn
     } // card header
   } // accordion
@@ -168,123 +231,10 @@
     .n-l-right-col {
       padding-right: 0;
       order: 2;
+
       img {
         padding-top: 0;
       }
     }
   }
-
-  .n-l-left-col {
-    padding-left: 0;
-    max-height: 450px;
-    overflow: auto;
-    margin-top: 30px;
-
-    /* width */
-    &::-webkit-scrollbar {
-      width: 10px;
-    }
-
-    /* Track */
-    &::-webkit-scrollbar-track {
-      background: #ebebeb;
-      border-radius: 25px;
-    }
-
-    /* Handle */
-    &::-webkit-scrollbar-thumb {
-      background: rgba(0,0,0,.2);
-      border-radius: 25px;
-    }
-
-    /* Handle on hover */
-    &::-webkit-scrollbar-thumb {
-      background: $primary;
-    }
-    /* Handle on hover */
-    &::-webkit-scrollbar-thumb:hover {
-      background: $primary;
-    }
-
-    .accordion {
-      .card,
-      .card-header {
-        background-color: white;
-        border: 0;
-        padding-bottom: 0;
-        padding-top: 0;
-      }
-
-      .card-body {
-        padding-bottom: 0;
-      }
-
-      .card {
-        padding-left: 30px;
-        padding-right: 25px;
-        margin-bottom: 30px;
-      }
-
-      .card-header {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        position: relative;
-
-        .logo {
-          border-radius: 50%;
-          height: 40px;
-          width: 40px;
-          overflow: hidden;
-          margin-right: 15px;
-          img {
-            max-width: 100%;
-            display: block;
-            filter: grayscale(1);
-          }
-        }
-
-        &.active-acc {
-          .logo {
-            img {
-              filter: grayscale(0);
-            }
-          }
-        }
-
-        .btn {
-          padding: 0;
-          color: $dark;
-          font-weight: 500;
-          font-size: 18px;
-          width: 100%;
-          //background: pink;
-          position: static;
-
-          &:after {
-            content: '\eaa0';
-            font-family: IcoFont;
-            font-style: normal;
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            border: 1px solid rgba($dark, .5);
-            height: 26px;
-            width: 26px;
-            border-radius: 50%;
-            line-height: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          } // after
-
-          &:not(.collapsed):after {
-            content: '\ea99';
-          }
-
-        } // btn
-      } // card header
-    } // accordion
-  } // left col
 }
