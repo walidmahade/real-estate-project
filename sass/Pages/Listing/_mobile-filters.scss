@@ -1,0 +1,18 @@
+#mobile-filters {
+  padding: 20px;
+  position: fixed;
+  //background-color: rgba($primary, 1);
+  background-color: white;
+  border-top: 1px solid #ebebeb;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  height: 95vh;
+  overflow: auto;
+  left: -9999px;
+  transition: left .8s ease-in-out;
+
+  &.show {
+    left: 0px;
+  }
+}

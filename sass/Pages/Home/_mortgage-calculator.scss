@@ -1,0 +1,93 @@
+#mortgage-calculator {
+  padding: 85px 0;
+
+  .container {
+    width: 680px;
+    max-width: 96%;
+  }
+
+  .m-c-header {
+    padding: 0 20px;
+
+    .title {
+      margin-bottom: 35px;
+    }
+  }
+
+  .m-c-form-wrap {
+    padding: 30px 20px;
+    border-radius: 16px;
+    background-color: #f8f8f8;
+    margin-top: 60px;
+
+    form {
+      display: block;
+      width: 100%;
+    }
+
+    .form-control {
+      padding: 28px 15px;
+      display: block;
+      border: solid 1px rgba(61, 61, 61, 0.08);
+      background-color: #ffffff;
+      &::placeholder {
+        color: #D3D3D3;
+      }
+    }
+
+    .m-c-form-bottom {
+      text-align: center;
+      padding-top: 40px;
+      margin-top: 40px;
+      border-top: 3px solid rgba($primary, .1);
+      .amount {
+        line-height: 1;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  #mortgage-calculator {
+    padding: 85px;
+
+    .container {
+      width: 680px;
+      max-width: 96%;
+    }
+
+    .m-c-header {
+      padding: 0 50px;
+
+      .title {
+        margin-bottom: 35px;
+      }
+    }
+
+    .m-c-form-wrap {
+      padding: 80px;
+      border-radius: 16px;
+      background-color: #f8f8f8;
+      margin-top: 60px;
+
+      .form-control {
+        padding: 28px 15px;
+        display: block;
+        border: solid 1px rgba(61, 61, 61, 0.08);
+        background-color: #ffffff;
+      }
+
+      .m-c-form-bottom {
+        text-align: center;
+        padding-top: 40px;
+        margin-top: 40px;
+        border-top: 3px solid rgba($primary, .1);
+        .amount {
+          line-height: 1;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}

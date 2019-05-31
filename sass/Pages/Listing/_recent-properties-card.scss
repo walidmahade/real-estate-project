@@ -1,0 +1,35 @@
+// recent properties item
+.recent-properties-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #ebebeb;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+
+  &:last-child {
+    border-bottom: 0;
+    margin-bottom: 0;
+    padding-bottom: 5px;
+  }
+
+  .r-p-i-image {
+    width: 70px;
+    border-radius: 6px;
+    margin-right: 10px;
+    img {
+      border-radius: 6px;
+    }
+  }
+
+  .r-p-i-info {
+    .title-small {
+      font-size: 16px;
+      margin: 0;
+    }
+    .property-location {
+      font-size: 12px;
+    }
+  }
+
+}

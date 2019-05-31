@@ -1,0 +1,38 @@
+.title-summery {
+  font-size: 24px;
+  color: $primary;
+  text-transform: capitalize;
+}
+
+.title-small {
+  font-size: 24px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.53;
+  letter-spacing: normal;
+  color: #3d3d3d;
+}
+
+p {
+  font-size: 18px;
+}
+
+::selection {
+  background-color: $primary;
+  color: #545454;
+}
+
+@media screen and (min-width: 992px) {
+  .title-small {
+    font-size: 30px;
+  }
+}
+
+/*---- font sizes ------*/
+.fs-16 { font-size: 16px; }
+.fs-18 { font-size: 18px; }
+.fs-22 { font-size: 22px; }
+.fs-24 { font-size: 24px; }
+.fs-30 { font-size: 30px; }
+.fs-60 { font-size: 60px; }

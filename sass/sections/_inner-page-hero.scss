@@ -1,0 +1,29 @@
+#inner-page-hero {
+  background-position: center center;
+  background-size: cover;
+
+  .page-title {
+    color: #fff;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+
+  .breadcrumb {
+    margin: 0;
+    padding: 0;
+
+    .breadcrumb-item {
+      font-size: 14px;
+      color: #fff;
+      text-transform: capitalize;
+
+      a {
+        color: #fff;
+      }
+
+      &::before {
+        color: #fff;
+      } // before
+    } // breadcrumb item
+  } // breadcrumb
+}

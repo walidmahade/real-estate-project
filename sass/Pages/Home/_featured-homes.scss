@@ -1,0 +1,153 @@
+#featured-homes {
+  position: relative;
+  padding: 85px 0 25px 0 ;
+
+  .section-overlay {
+    z-index: -1;
+  }
+
+  .title-small {
+    margin: 25px 0;
+  }
+}
+
+
+.f-h-s-left {
+  text-align: center;
+  width: 45%;
+  order: 2;
+}
+.f-h-s-right {
+  width: 50%;
+  margin-bottom: 60px;
+  order: 1;
+}
+
+.f-h-s-numbers {
+  margin-top: 45px;
+  font-weight: 500;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+
+  p {
+    margin: 0;
+  }
+
+  &__left {
+    margin-right: 45px;
+  }
+
+  .f-h-s-n-item {
+    margin-bottom: 35px;
+  }
+}
+
+#f-h-s__nav {
+  margin-top: -15px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+
+  .nav-item {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    //background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 20px 0 rgba(36, 49, 101, 0);
+    transition: .3s;
+    cursor: pointer;
+
+    i {
+      font-size: 20px;
+      transition: .3s;
+    } // i
+
+    &:hover {
+      //background-color: #fff;
+      //box-shadow: 0 10px 20px 0 rgba(36, 49, 101, 0.1);
+      i {
+        color: $primary;
+      }
+    }// : hover
+  }// nav item
+}
+
+#f-h-s__nav-dots {
+  width: calc(100% - 150px);
+
+  .slick-dots {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(211, 216, 224, 0.4);
+    border-radius: 50px;
+    width: 100%;
+    height: 4px;
+
+    li {
+      line-height: 1;
+      height: 4px;
+    }
+  }
+
+  button {
+    background-color: transparent;
+    text-indent: -99999px;
+    border: 0;
+    outline: none;
+    padding: 0;
+    height: 4px;
+    border-radius: 50px;
+    width: 50px;
+  }
+
+  .slick-active {
+    button {
+      background-color: $primary;
+    }
+  }
+}
+
+#featured-homes-image-slider {
+  .house-img {
+    padding: 40px;
+
+    &:focus {
+      outline: none;
+    }
+
+    img {
+      border-radius: 6px;
+      box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.06);
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .f-h-s-left {
+    order: 1;
+    text-align: left;
+  }
+  .f-h-s-right {
+    margin-bottom: -150px;
+    order: 2;
+  }
+  .f-h-s-numbers {
+    justify-content: flex-start;
+  }
+}

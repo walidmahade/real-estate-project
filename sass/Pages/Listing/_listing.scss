@@ -1,0 +1,21 @@
+#listings {
+  padding: 65px 0;
+}
+
+#mobile-filters-trigger {
+  display: none;
+}
+
+@media screen and (max-width: 991px) {
+  .listing-left,
+  .search-results-top-filter {
+    display: none;
+  }
+  .listing-right {
+    width: 100%;
+  }
+
+  #mobile-filters-trigger {
+    display: block;
+  }
+}

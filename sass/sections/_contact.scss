@@ -1,0 +1,56 @@
+#contact-us {
+  padding: 100px 0;
+
+  .col {
+    &--address {
+      //margin-top: 35px;
+      text-align: center;
+    }
+    &--form {
+      margin-top: 45px;
+    }
+  }
+}
+
+.address-lineoitem {
+  margin-top: 15px;
+  p {margin: 0;padding: 0;}
+}
+
+.contact-form-wrapper {
+  background-color: #f8f8f8;
+  display: block;
+  padding: 30px;
+  border-radius: 6px;
+  input,
+  textarea,
+  .form-control{
+    padding: 25px 20px;
+    line-height: 1;
+    border: solid 1px rgba(239, 178, 0, 0.2);
+  }
+
+  .btn {
+    padding: 13px 40px;
+    color: #ffffff;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  #contact-us {
+    padding: 100px 0;
+
+    .col {
+      &--address {
+        text-align: left;
+      }
+      &--form {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .contact-form-wrapper {
+    padding: 50px;
+  }
+}

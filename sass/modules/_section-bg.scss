@@ -1,0 +1,19 @@
+@media screen and (min-width: 1200px) {
+  .section-overlay {
+    background-color: #f8f8f8;
+    position: absolute;
+    right: 0;
+    left: auto;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 4px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .section-overlay {
+    width: 90%;
+  }
+}

@@ -9,23 +9,34 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="css/icofont.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
+<!--<body class="logged-in">-->
+<body >
 
-<header class="header">
+<header class="header" id="site-header">
     <div class="container">
-        <div class="row align-items-center">
+        <div class="row align-items-center justify-content-between">
 
-            <div class="brand col-12 col-md-2">
-                <img src="img/logo.png" class="img-fluid" alt="">
+            <div class="brand col-6 col-md-2">
+                <a href="/">
+                    <img src="img/logo.png" class="img-fluid" alt="">
+                </a>
             </div>
 
-            <div class="menu-wrap col-12 col-md-9">
+            <div id="mobile-menu-icon" class="col-6 text-right">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384.97 384.97"><path d="M12.03 120.303h360.9c6.64 0 12.03-5.4 12.03-12.03s-5.4-12.03-12.03-12.03H12.03c-6.64 0-12.03 5.4-12.03 12.03a12.04 12.04 0 0 0 12.03 12.03zm360.9 60.152H12.03c-6.64 0-12.03 5.4-12.03 12.03a12.04 12.04 0 0 0 12.03 12.03h360.9c6.64 0 12.03-5.4 12.03-12.03s-5.4-12.03-12.03-12.03zm0 84.212H132.333c-6.64 0-12.03 5.4-12.03 12.03s5.4 12.03 12.03 12.03H372.94c6.64 0 12.03-5.4 12.03-12.03s-5.4-12.03-12.03-12.03z"/></svg>
+            </div>
+
+            <div class="menu-wrap col-12 col-md-10" id="main-menu-js">
+                <div id="mobile-menu-close">
+                    <i class="icofont-close-circled"></i>
+                </div>
+
                 <nav class="main-menu">
-                    <ul class="main-menu__wrap list-unstyled">
+                    <ul class="menu-items__wrap list-unstyled">
                         <li class="main-menu__item"><a href="#">About</a></li>
                         <li class="main-menu__item main-menu__item--active"><a href="#">Gallery</a></li>
                         <li class="main-menu__item"><a href="#">Apartment</a></li>
@@ -35,20 +46,89 @@
                 </nav>
 
                 <div class="header__cta">
-                    <div class="search">
+                    <div id="search">
                         <span class="icon iocn--search">
                             <i class="icofont-search"></i>
                         </span>
                         <span>Search</span>
                     </div>
-                    <div class="add-property">
-                        <a href="#" class="btn btn-primary">
+                    <!--user not logged in-->
+                    <div class="login-btn visible-logged-out">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-primary dropdown-toggle font-weight-normal" type="button" id="login-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Login
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="login-dropdown">
+                                <a class="dropdown-item" href="#">Login</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#">Sign Up</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--user logged in-->
+                    <div class="add-property visible-logged-in">
+                        <a href="add-property.html" class="btn btn-primary">
                             <span class="icon icon--plus">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/></svg>
                             </span>
                             <span>Add Property</span>
                         </a>
                     </div>
+                    <!--add property btn end-->
+                    <!--language and currency-->
+                    <div class="language-selector-btn">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-primary dropdown-toggle font-weight-normal" type="button" id="language-selector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="img/flags/usa.png" alt="">
+                                <!--<span>EN</span>-->
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="language-selector">
+                                <a class="dropdown-item" href="#">
+                                    <img src="img/flags/australia.png" alt="">
+                                    <span>AU</span>
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <img src="img/flags/spain.png" alt="">
+                                    <span>ESP</span>
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <img src="img/flags/egypt.png" alt="">
+                                    <span>EG</span>
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <img src="img/flags/india.png" alt="">
+                                    <span>DN</span>
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <img src="img/flags/mexico.png" alt="">
+                                    <span>CP</span>
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <img src="img/flags/pakistan.png" alt="">
+                                    <span>TF</span>
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <img src="img/flags/south-korea.png" alt="">
+                                    <span>CW</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--lang selector end-->
+                    <div class="currency-selector-btn">
+                        <div class="dropdown">
+                            <button class="btn btn-outline-primary dropdown-toggle font-weight-normal" type="button" id="currency-selector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                USD
+                            </button>
+
+                            <div class="dropdown-menu" aria-labelledby="currency-selector">
+                                <a class="dropdown-item" href="#">AUSD</a>
+                                <a class="dropdown-item" href="#">TAKA</a>
+                                <a class="dropdown-item" href="#">INR</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--language and currency end-->
                 </div>
             </div>
             <!--menu wrap end-->
@@ -62,39 +142,1147 @@
 <section id="hero" class="section section--hero">
     <div class="container">
         <div class="row">
-            <div class="col-6 d-flex align-items-center flex-wrap align-content-center">
-                <h3 class="text-primary">Find the best</h3>
-                <h1>Real Estate agent near you</h1>
-                <p>
+            <div class="col-12 col-lg-6 col-details d-flex align-items-center flex-wrap align-content-center">
+                <h3 class="text-primary title-summery w-100">Find the best</h3>
+                <h1 class="hero-title w-100">Real Estate agent near you</h1>
+                <p class="hero-subtitle w-100">
                     Develop pandemic methodologies after magnetic supply chains harness adaptive alignments via functional manu products processes.
                 </p>
 
-                <div class="herp__search">
-                    <div class="form-group">
-                        <label for="hero__search__field"></label>
-                        <span class="icon iocn--search">
-                            <i class="icofont-search"></i>
-                        </span>
-                        <input type="search" placeholder="Type your location" class="form-control rounded-pill" id="hero__search__field">
+                <div class="hero__search w-100">
+                    <div class="input-group">
+                        <label for="hero__search__field">
+                            <span class="icon iocn--search">
+                                <i class="icofont-search"></i>
+                            </span>
+                            <input type="search" placeholder="Type your location" class="form-control rounded-pill" id="hero__search__field">
+                        </label>
                     </div>
                 </div>
             </div>
-            <div class="col-6">
-                <div class="owl-carousel" id="hero-slider">
+
+            <div class="col-12 col-lg-6 col-slider">
+                <div id="hero-slider">
                     <img src="img/hero-slider-img.png" alt="couple buying house" class="slider-item-img">
                     <img src="img/hero-slider-img.png" alt="couple buying house" class="slider-item-img">
                     <img src="img/hero-slider-img.png" alt="couple buying house" class="slider-item-img">
                     <img src="img/hero-slider-img.png" alt="couple buying house" class="slider-item-img">
+                </div>
+                <div id="hero-slider-nav"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about">
+    <div class="section-overlay"></div>
+    <div class="section-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-lg-5 col-xl-6 about-col-left">
+                    <h3 class="text-primary title-summery">About Us</h3>
+                    <h2 class="title-small">From start to finish we pride ourselves on building
+                        a home tailored to suit you
+                        and your family.</h2>
+                    <p>
+                        Synergistically mesh premier resources with enabled interfaces. Rapaciously visualize ethical applications to rather than the resource services.
+                    </p>
+                    <div class="about-cta">
+                        <a href="#" class="btn btn-primary rounded-pill">Learn More</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-lg-7 col-xl-6 about-col-right">
+                    <div class="card card--custom">
+                        <!--icon box start-->
+                        <div class="card-icon-box">
+                            <div class="card-icon-box__icon">
+                                <img src="img/home.svg" alt="">
+                            </div>
+                            <div class="card-icon-box__text">
+                                In this environment on a demanding terraced plot overlooking the bay, the investor decided to implement.
+                            </div>
+                        </div>
+                        <!--icon box end-->
+
+                        <!--icon box start-->
+                        <div class="card-icon-box">
+                            <div class="card-icon-box__icon">
+                                <img src="img/003-prize.svg" alt="">
+                            </div>
+                            <div class="card-icon-box__text">
+                                Extraordinary ideas of the investor along with the requirement that the we know new house of the estate property.
+                            </div>
+                        </div>
+                        <!--icon box end-->
+
+                        <!--icon box start-->
+                        <div class="card-icon-box">
+                            <div class="card-icon-box__icon">
+                                <img src="img/004-house-1.svg" alt="">
+                            </div>
+                            <div class="card-icon-box__text">
+                                The individual zones of the building were created not only with respect to the residential functions of the support.
+                            </div>
+                        </div>
+                        <!--icon box end-->
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+<section id="featured-gallery">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-12 col-lg-6">
+                <h2 class="fs-40 font-weight-bold">Featured Gallery</h2>
+                <p>Synergistically mesh premier resources with enabled interfaces
+                    apaciously visualize ethical.</p>
+            </div>
+
+            <div class="col-12 col-lg-6">
+                <div id="f-g-slider-nav">
+                    <!--<span class="nav-item nav-left"><i class="icofont-long-arrow-left"></i></span>-->
+                    <!--<span class="nav-item nav-right"><i class="icofont-long-arrow-right"></i></span>-->
+                    <div id="f-g-slider-dots"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="featured-slider">
+        <!--slider item start-->
+        <a href="#" class="f-s__item">
+            <div class="card card--custom">
+                <div class="f-s__item__img">
+                    <img src="img/featured-slider-img-1.jpg" alt="">
+                </div><div class="f-s__item__company-logo">
+                    <img src="img/logo.jpg" alt="">
+                </div>
+
+                <div class="f-s__item__details">
+                    <h4 class="property-title">Honey Suckle Cottage</h4>
+                    <div class="property-l-p-wrap">
+                        <div class="property-locate">
+                            <span class="pl-icon"><i class="icofont-location-pin"></i></span>
+                            <span>
+                                North Miami Avenue, Miami,
+                                FL, USA
+                            </span>
+                        </div>
+                        <div class="property-price">
+                            $46,205,609
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-s__item__footer">
+                    <div class="icon-box-small">
+                        <div class="icon-box-small__item">
+                            <img src="img/bed-icon.svg" alt="">
+                            <h5 class="title">05 beds</h5>
+                        </div>
+
+                        <div class="icon-box-small__item">
+                            <img src="img/bath-iocn.svg" alt="">
+                            <h5 class="title">02 Baths</h5>
+                        </div>
+
+                        <div class="icon-box-small__item">
+                            <img src="img/car-iocn.svg" alt="">
+                            <h5 class="title">Yes</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!--slider item end-->
+        <!--slider item start-->
+        <a href="#" class="f-s__item">
+            <div class="card card--custom">
+                <div class="f-s__item__img">
+                    <img src="img/featured-slider-img-1.jpg" alt="">
+                </div>
+                <div class="f-s__item__company-logo">
+                    <img src="img/logo.jpg" alt="">
+                </div>
+
+                <div class="f-s__item__details">
+                    <h4 class="property-title">Honey Suckle Cottage</h4>
+                    <div class="property-l-p-wrap">
+                        <div class="property-locate">
+                            <span class="pl-icon"><i class="icofont-location-pin"></i></span>
+                            <span>
+                                North Miami Avenue, Miami,
+                                FL, USA
+                            </span>
+                        </div>
+                        <div class="property-price">
+                            $46,205,609
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-s__item__footer">
+                    <div class="icon-box-small">
+                        <div class="icon-box-small__item">
+                            <img src="img/bed-icon.svg" alt="">
+                            <h5 class="title">05 beds</h5>
+                        </div>
+
+                        <div class="icon-box-small__item">
+                            <img src="img/bath-iocn.svg" alt="">
+                            <h5 class="title">02 Baths</h5>
+                        </div>
+
+                        <div class="icon-box-small__item">
+                            <img src="img/car-iocn.svg" alt="">
+                            <h5 class="title">Yes</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!--slider item end-->
+        <!--slider item start-->
+        <a href="#" class="f-s__item">
+            <div class="card card--custom">
+                <div class="f-s__item__img">
+                    <img src="img/featured-slider-img-1.jpg" alt="">
+                </div>
+                <div class="f-s__item__company-logo">
+                    <img src="img/logo.jpg" alt="">
+                </div>
+
+                <div class="f-s__item__details">
+                    <h4 class="property-title">Honey Suckle Cottage</h4>
+                    <div class="property-l-p-wrap">
+                        <div class="property-locate">
+                            <span class="pl-icon"><i class="icofont-location-pin"></i></span>
+                            <span>
+                                North Miami Avenue, Miami,
+                                FL, USA
+                            </span>
+                        </div>
+                        <div class="property-price">
+                            $46,205,609
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-s__item__footer">
+                    <div class="icon-box-small">
+                        <div class="icon-box-small__item">
+                            <img src="img/bed-icon.svg" alt="">
+                            <h5 class="title">05 beds</h5>
+                        </div>
+
+                        <div class="icon-box-small__item">
+                            <img src="img/bath-iocn.svg" alt="">
+                            <h5 class="title">02 Baths</h5>
+                        </div>
+
+                        <div class="icon-box-small__item">
+                            <img src="img/car-iocn.svg" alt="">
+                            <h5 class="title">Yes</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!--slider item end-->
+        <!--slider item start-->
+        <a href="#" class="f-s__item">
+            <div class="card card--custom">
+                <div class="f-s__item__img">
+                    <img src="img/featured-slider-img-1.jpg" alt="">
+                </div>
+                <div class="f-s__item__company-logo">
+                    <img src="img/logo.jpg" alt="">
+                </div>
+
+                <div class="f-s__item__details">
+                    <h4 class="property-title">Honey Suckle Cottage</h4>
+                    <div class="property-l-p-wrap">
+                        <div class="property-locate">
+                            <span class="pl-icon"><i class="icofont-location-pin"></i></span>
+                            <span>
+                                North Miami Avenue, Miami,
+                                FL, USA
+                            </span>
+                        </div>
+                        <div class="property-price">
+                            $46,205,609
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-s__item__footer">
+                    <div class="icon-box-small">
+                        <div class="icon-box-small__item">
+                            <img src="img/bed-icon.svg" alt="">
+                            <h5 class="title">05 beds</h5>
+                        </div>
+
+                        <div class="icon-box-small__item">
+                            <img src="img/bath-iocn.svg" alt="">
+                            <h5 class="title">02 Baths</h5>
+                        </div>
+
+                        <div class="icon-box-small__item">
+                            <img src="img/car-iocn.svg" alt="">
+                            <h5 class="title">Yes</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!--slider item end-->
+        <!--slider item start-->
+        <a href="#" class="f-s__item">
+            <div class="card card--custom">
+                <div class="f-s__item__img">
+                    <img src="img/featured-slider-img-1.jpg" alt="">
+                </div>
+                <div class="f-s__item__company-logo">
+                    <img src="img/logo.jpg" alt="">
+                </div>
+
+                <div class="f-s__item__details">
+                    <h4 class="property-title">Honey Suckle Cottage</h4>
+                    <div class="property-l-p-wrap">
+                        <div class="property-locate">
+                            <span class="pl-icon"><i class="icofont-location-pin"></i></span>
+                            <span>
+                                North Miami Avenue, Miami,
+                                FL, USA
+                            </span>
+                        </div>
+                        <div class="property-price">
+                            $46,205,609
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-s__item__footer">
+                    <div class="icon-box-small">
+                        <div class="icon-box-small__item">
+                            <img src="img/bed-icon.svg" alt="">
+                            <h5 class="title">05 beds</h5>
+                        </div>
+
+                        <div class="icon-box-small__item">
+                            <img src="img/bath-iocn.svg" alt="">
+                            <h5 class="title">02 Baths</h5>
+                        </div>
+
+                        <div class="icon-box-small__item">
+                            <img src="img/car-iocn.svg" alt="">
+                            <h5 class="title">Yes</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!--slider item end-->
+        <!--slider item start-->
+        <a href="#" class="f-s__item">
+            <div class="card card--custom">
+                <div class="f-s__item__img">
+                    <img src="img/featured-slider-img-1.jpg" alt="">
+                </div>
+                <div class="f-s__item__company-logo">
+                    <img src="img/logo.jpg" alt="">
+                </div>
+
+                <div class="f-s__item__details">
+                    <h4 class="property-title">Honey Suckle Cottage</h4>
+                    <div class="property-l-p-wrap">
+                        <div class="property-locate">
+                            <span class="pl-icon"><i class="icofont-location-pin"></i></span>
+                            <span>
+                                North Miami Avenue, Miami,
+                                FL, USA
+                            </span>
+                        </div>
+                        <div class="property-price">
+                            $46,205,609
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-s__item__footer">
+                    <div class="icon-box-small">
+                        <div class="icon-box-small__item">
+                            <img src="img/bed-icon.svg" alt="">
+                            <h5 class="title">05 beds</h5>
+                        </div>
+
+                        <div class="icon-box-small__item">
+                            <img src="img/bath-iocn.svg" alt="">
+                            <h5 class="title">02 Baths</h5>
+                        </div>
+
+                        <div class="icon-box-small__item">
+                            <img src="img/car-iocn.svg" alt="">
+                            <h5 class="title">Yes</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!--slider item end-->
+        <!--slider item start-->
+        <a href="#" class="f-s__item">
+            <div class="card card--custom">
+                <div class="f-s__item__img">
+                    <img src="img/featured-slider-img-1.jpg" alt="">
+                </div>
+                <div class="f-s__item__company-logo">
+                    <img src="img/logo.jpg" alt="">
+                </div>
+
+                <div class="f-s__item__details">
+                    <h4 class="property-title">Honey Suckle Cottage</h4>
+                    <div class="property-l-p-wrap">
+                        <div class="property-locate">
+                            <span class="pl-icon"><i class="icofont-location-pin"></i></span>
+                            <span>
+                                North Miami Avenue, Miami,
+                                FL, USA
+                            </span>
+                        </div>
+                        <div class="property-price">
+                            $46,205,609
+                        </div>
+                    </div>
+                </div>
+
+                <div class="f-s__item__footer">
+                    <div class="icon-box-small">
+                        <div class="icon-box-small__item">
+                            <img src="img/bed-icon.svg" alt="">
+                            <h5 class="title">05 beds</h5>
+                        </div>
+
+                        <div class="icon-box-small__item">
+                            <img src="img/bath-iocn.svg" alt="">
+                            <h5 class="title">02 Baths</h5>
+                        </div>
+
+                        <div class="icon-box-small__item">
+                            <img src="img/car-iocn.svg" alt="">
+                            <h5 class="title">Yes</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!--slider item end-->
+
+    </div>
+</section>
+
+<section id="featured-homes">
+    <div class="section-overlay"></div>
+
+    <!--slider-->
+    <div class="section-content">
+        <div class="container container--custom">
+            <div class="row">
+                    <div class="col-12 col-lg-6 col-xl-5 f-h-s-left">
+                        <div class="f-h-s-details">
+                            <h5 class="text-primary fs-18">Apartment Features</h5>
+                            <h3 class="title-small">Magic home know how
+                                to get more for your
+                                property selling.</h3>
+                            <p>
+                                There are many variations of passages of
+                                Lorem Ipsum available, but the majority have
+                                suffered alteration in some form, by injected
+                                humour, or randomised words which don't
+                                look even slightly believable.
+                            </p>
+                        </div>
+                        <div class="f-h-s-numbers">
+                            <div class="f-h-s-numbers__left">
+                                <div class="f-h-s-n-item">
+                                    <p>Swiming Pool</p>
+                                    <p class="text-primary">69 Square feet</p>
+                                </div>
+                                <div class="f-h-s-n-item">
+                                    <p>Large Playground</p>
+                                    <p class="text-primary">69 Square feet</p>
+                                </div>
+                                <div class="f-h-s-n-item">
+                                    <p>High security</p>
+                                    <p class="text-primary">69 Square feet</p>
+                                </div>
+                            </div>
+
+                            <div class="f-h-s-numbers__right">
+                                <div class="f-h-s-n-item">
+                                    <p>Garage</p>
+                                    <p class="text-primary">69 Square feet</p>
+                                </div>
+                                <div class="f-h-s-n-item">
+                                    <p>Basement</p>
+                                    <p class="text-primary">69 Square feet</p>
+                                </div>
+                                <div class="f-h-s-n-item">
+                                    <p>Water storage</p>
+                                    <p class="text-primary">69 Square feet</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!-- f-h-s-left -->
+
+                    <div class="col-12 col-lg-6 col-xl-7 f-h-s-right">
+                        <div id="featured-homes-image-slider">
+                            <!--slider item-->
+                            <div class="house-img">
+                                <img src="img/house-featured-home-slider.png" alt="" class="img-fluid">
+                            </div>
+                            <!--slider item end-->
+                            <!--slider item-->
+                            <div class="house-img">
+                                <img src="img/house-featured-home-slider.png" alt="" class="img-fluid">
+                            </div>
+                            <!--slider item end-->
+                            <!--slider item-->
+                            <div class="house-img">
+                                <img src="img/house-featured-home-slider.png" alt="" class="img-fluid">
+                            </div>
+                            <!--slider item end-->
+                        </div>
+
+                        <div id="f-h-s__nav">
+                            <!--<span class="nav-left"><i class="fas fa-chevron-left"></i></span>-->
+                            <!--<span class="nav-right"><i class="fas fa-chevron-right"></i></span>-->
+                            <div id="f-h-s__nav-dots">
+                            </div>
+                        </div>
+                    </div> <!-- f-h-s-right -->
+
+            </div><!-- row -->
+        </div><!-- container -->
+    </div><!-- section content -->
+</section>
+
+
+<section id="floor-plan">
+    <div class="container">
+
+        <div class="row header-row">
+            <h2 class="fs-40 font-weight-bold">Floor Plan</h2>
+        </div>
+
+        <div class="row content-menu-row">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="penthouse-tab" data-toggle="tab" href="#penthouse" role="tab" aria-controls="penthouse" aria-selected="true">Penthouse</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="double-height-tab" data-toggle="tab" href="#double-height" role="tab" aria-controls="double-height" aria-selected="false">Double Height</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="duplex-tab" data-toggle="tab" href="#duplex" role="tab" aria-controls="duplex" aria-selected="false">Duplex</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="studio-tab" data-toggle="tab" href="#studio" role="tab" aria-controls="studio" aria-selected="false">Studio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="upfloor-tab" data-toggle="tab" href="#upfloor" role="tab" aria-controls="upfloor" aria-selected="false">Up Floor</a>
+                </li>
+            </ul>
+        </div> <!-- row 1 -->
+
+        <div class="row">
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="penthouse" role="tabpanel" aria-labelledby="penthouse-tab">
+                    <div class="container-fluid">
+                        <div class="row justify-content-between">
+                            <div class="col-12 col-lg-5 floor-plan-details-col">
+                                <p class="fs-16">The gracious entry foyer leads to an open kitchen with custom stained walnut cabinetry, granite countertops, and a built-in dining banquette (in select one bedroom homes).</p>
+
+                                <ul class="list-group fs-18 mt-4">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <span>Floor no</span>
+                                        <span>89</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <span>Rooms</span>
+                                        <span>6</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <span>Total area SQ.M</span>
+                                        <span>275</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <span>Parking</span>
+                                        <span>Yes</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        <span>Price</span>
+                                        <span>3200/m<sup>2</sup></span>
+                                    </li>
+                                </ul>
+
+                                <div class="cta mt-4">
+                                    <a href="#" class="btn btn-light w-100 text-primary rounded-pill py-2 font-weight-normal">Schedule A Visit</a>
+                                </div>
+
+                            </div>
+
+                            <div class="col-12 col-lg-6 floor-plan-img-col">
+                                <img src="img/floor-pan-map.jpg" alt="" class="img-fluid">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-pane fade" id="double-height" role="tabpanel" aria-labelledby="double-height-tab">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam blanditiis eligendi ipsam laboriosam maiores praesentium ratione recusandae similique tempore, totam! Ab alias commodi consectetur ducimus eos iste optio quibusdam sit!
+                </div>
+                <div class="tab-pane fade" id="duplex" role="tabpanel" aria-labelledby="duplex-tab">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, aut, corporis est, explicabo iusto laborum modi numquam omnis quidem ratione similique sit veritatis? Autem commodi ducimus eligendi ex sequi voluptatum.
+                </div>
+
+                <div class="tab-pane fade" id="studio" role="tabpanel" aria-labelledby="studio-tab">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, aut, corporis est, explicabo iusto laborum modi numquam omnis quidem ratione similique sit veritatis? Autem commodi ducimus eligendi ex sequi voluptatum.
+                </div>
+
+                <div class="tab-pane fade" id="upfloor" role="tabpanel" aria-labelledby="upfloor-tab">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, aut, corporis est, explicabo iusto laborum modi numquam omnis quidem ratione similique sit veritatis? Autem commodi ducimus eligendi ex sequi voluptatum.
+                </div>
+            </div>
+        </div><!-- row 2 -->
+
+    </div><!-- container -->
+</section>
+
+<section id="nearby-location">
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6 mb-4">
+                <h3 class="fs-40 font-weight-bold mb-4">Nearby Location</h3>
+                <p>Synergistically mesh premier resources with enabled interfaces
+                    apaciously visualize ethical.</p>
+            </div>
+
+            <div class="col-12 col-lg-6">
+                <div class="dropdown dropdown--location">
+                    <button class="btn btn-light rounded-pill font-weight-normal dropdown-toggle fs-20" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="0,10">
+                        Restuarant
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row nearby-location-details">
+            <div class="col-12 col-lg-6 n-l-left-col">
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header active-acc" id="headingOne">
+                            <div class="logo">
+                                <img src="img/logo.jpg" alt="">
+                            </div>
+                            <h2 class="mb-0">
+                                <button class="btn btn-link w-100" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    The Dairy Godmother
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid  high life accusamus terry  ad squid.eiusmod high life  terry richardson ad squid.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <div class="logo">
+                                <img src="img/logo.jpg" alt="">
+                            </div>
+                            <h2 class="mb-0">
+                                <button class="btn btn-link w-100" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                    Cheesy does it
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <div class="logo">
+                                <img src="img/logo.jpg" alt="">
+                            </div>
+                            <h2 class="mb-0">
+                                <button class="btn btn-link w-100" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+                                    Unspoken Truth
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                            <div class="logo">
+                                <img src="img/logo.jpg" alt="">
+                            </div>
+                            <h2 class="mb-0">
+                                <button class="btn btn-link w-100" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                                    Limited Acronyms
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header" id="headingFive">
+                            <div class="logo">
+                                <img src="img/logo.jpg" alt="">
+                            </div>
+                            <h2 class="mb-0">
+                                <button class="btn btn-link w-100" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                                    Good Enough
+                                </button>
+                            </h2>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordionExample">
+                            <div class="card-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-6 n-l-right-col">
+                <div id="nearby-location-map">
+                    <img src="img/nearby-location.jpg" alt="" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<section id="mortgage-calculator">
+    <div class="container">
+
+        <div class="row flex-wrap text-center m-c-header">
+            <h3 class="fs-40 font-weight-bold w-100 title">Mortgage Calculator</h3>
+            <p class="w-100">
+                Synergistically mesh premier resources with enabled interfaces
+                apaciou slyethical.
+            </p>
+        </div>
+
+        <div class="row m-c-form-wrap">
+            <form>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Down payment</label>
+                            <input type="number" class="form-control" placeholder="$1223">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Down payment 2</label>
+                            <input type="number" class="form-control" placeholder="$1000">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Rate</label>
+                            <input type="number" class="form-control" placeholder="First name">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Term</label>
+                            <input type="number" class="form-control" placeholder="Last name">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">Years</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">Months</label>
+                    </div>
+                </div>
+
+                <div class="form-group m-c-form-bottom">
+                    <p>Permonth</p>
+                    <h1 class="m-0 amount">AUD 5,219</h1>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+<style>
+    /* Always set the map height explicitly to define the size of the div
+     * element that contains the map. */
+    #map {
+        height: 600px;
+    }
+    /* Optional: Makes the sample page fill the window. */
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* The popup bubble styling. */
+    .popup-bubble {
+        /* Position the bubble centred-above its parent. */
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(-50%, -100%);
+        /* Style the bubble. */
+        background-color: white;
+        padding: 5px;
+        border-radius: 5px;
+        font-family: sans-serif;
+        overflow-y: auto;
+        max-height: 60px;
+        box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.5);
+    }
+    /* The parent of the bubble. A zero-height div at the top of the tip. */
+    .popup-bubble-anchor {
+        /* Position the div a fixed distance above the tip. */
+        position: absolute;
+        width: 100%;
+        bottom: /* TIP_HEIGHT= */ 8px;
+        left: 0;
+    }
+    /* This element draws the tip. */
+    .popup-bubble-anchor::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        /* Center the tip horizontally. */
+        transform: translate(-50%, 0);
+        /* The tip is a https://css-tricks.com/snippets/css/css-triangle/ */
+        width: 0;
+        height: 0;
+        /* The tip is 8px high, and 12px wide. */
+        border-left: 6px solid transparent;
+        border-right: 6px solid transparent;
+        border-top: /* TIP_HEIGHT= */ 8px solid white;
+    }
+    /* JavaScript will position this div at the bottom of the popup tip. */
+    .popup-container {
+        cursor: auto;
+        height: 0;
+        position: absolute;
+        /* The max width of the info window. */
+        width: 200px;
+    }
+</style>
+
+<!--<section id="property-map">-->
+    <!--<div id="map"></div>-->
+    <!--<div id="content">-->
+        <!--Hello world!-->
+    <!--</div>-->
+<!--</section>-->
+
+<section id="contact-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-5 col--address">
+                <h3 class="fs-40 font-weight-bold w-100 title">Say Hello to us</h3>
+                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate distinctio eum iste minima odio quae quas. Dolores magnam nisi obcaecati odio tempora tempore unde voluptatibus. Debitis facere vel vitae voluptas.</p>
+                <div class="address-lineoitem">
+                    <p class="text-primary font-weight-bold">Address</p>
+                    <p>1066 Budapest, Zichy jano Street 2</p>
+                </div>
+                <div class="address-lineoitem">
+                    <p class="text-primary font-weight-bold">phone</p>
+                    <p>+880199456</p>
+                </div>
+                <div class="address-lineoitem">
+                    <p class="text-primary font-weight-bold">Email</p>
+                    <p>example@domain.com</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-7 col--form">
+                <div class="contact-form-wrapper">
+                    <form class="">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <!--<label for="inputEmail4">Name</label>-->
+                            <input type="text" class="form-control" id="inputEmail4" placeholder="Your Name">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <!--<label for="inputPassword4">Phone</label>-->
+                            <input type="text" class="form-control" id="inputPassword4" placeholder="Phone Number">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <!--<label for="inputAddress">Email</label>-->
+                        <input type="Email" class="form-control" id="inputAddress" placeholder="test@live.com">
+                    </div>
+
+                    <div class="form-group">
+                        <!--<label for="inputAddress2">Address 2</label>-->
+                        <textarea type="text" class="form-control" rows="10" id="inputAddress2" placeholder="How can we help you?"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100">Contact Us</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<Footer class="site-footer bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-7 col-lg-4">
+                <h4 class="footer-col-title">Contact Us</h4>
+                <ul class="footer__links">
+                    <li>Address: 20/F Green Road, California</li>
+                    <li>Email: info@jaizerproperties.com</li>
+                    <li>Phone: +234 4567 6789</li>
+                    <li>Fax: +XXXX XXXX XXX</li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-md-5 col-lg-2">
+                <h4 class="footer-col-title">Quick Links</h4>
+                <ul class="footer__links">
+                    <li><a href="#">Properties Listing</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <h4 class="footer-col-title">Resources</h4>
+                <ul class="footer__links">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Property Details</a></li>
+                </ul>
+            </div>
+
+            <div class="col-12 col-md-8 col-lg-4">
+                <h4 class="footer-col-title">Subscribe</h4>
+                <div class="subscribe-form">
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <span class="input-group-text bg-primary text-light" id="basic-addon2">Subscribe</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-link-facebook">
+                        <i class="icofont-facebook"></i>
+                    </a>
+                    <a href="#" class="social-link-twitter">
+                        <i class="icofont-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link-linkedin">
+                        <i class="icofont-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link-nstagram">
+                        <i class="icofont-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</Footer>
+
+<section id="search-full-screen" class="hidden" data-js-header-offset>
+    <div class="container">
+        <div class="row">
+            <div class="col-8 offset-2 p-5">
+                <!--search input bar-->
+                <div class="input-group">
+                    <input type="text" class="form-control d-block w-100" placeholder="Search By Location" id="main-header-search">
+                    <div class="input-group-append">
+                        <i class="icofont-search"></i>
+                    </div>
+                </div>
+                <!--search input bar end -->
+                <!--search results-->
+                <div id="search-result">
+                    <a href="#" class="search-result__item">
+                        <h2 class="title">Hot chocolate</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, perferendis.</p>
+                    </a>
+                    <a href="#" class="search-result__item">
+                        <h2 class="title">Hot chocolate</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, perferendis.</p>
+                    </a>
+                    <a href="#" class="search-result__item">
+                        <h2 class="title">Hot chocolate</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, perferendis.</p>
+                    </a>
+                    <a href="#" class="search-result__item">
+                        <h2 class="title">Hot chocolate</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, perferendis.</p>
+                    </a>
+                    <a href="#" class="search-result__item">
+                        <h2 class="title">Hot chocolate</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nulla, perferendis.</p>
+                    </a>
+                </div>
+                <!--search results end-->
+            </div>
+        </div>
+    </div>
+    <div id="close-header-search">
+        <i class="icofont-close"></i>
+        <span>close</span>
+    </div>
+</section>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="js/bootstrap/bootstrap.min.js"></script>
-<script src="js/owl-carousel/owl.carousel.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="js/main.js"></script>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpUU0Y71N721R-TR8Ie69VJ7hMobM0jdo&callback=initMap">
+</script>
+<script>
+    // This example displays a marker at the center of Australia.
+    // When the user clicks the marker, an info window opens.
+    // The maximum width of the info window is set to 200 pixels.
+
+    function initMap() {
+        let uluru = {lat: -25.363, lng: 131.044};
+
+        let map = new google.maps.Map(document.getElementById('map'), {
+            center: new google.maps.LatLng(-33.91722, 151.23064),
+            zoom: 16
+        });
+
+        let locations = [
+            {
+                position: new google.maps.LatLng(-33.91721, 151.22630),
+                type: 'info'
+            }, {
+                position: new google.maps.LatLng(-33.91539, 151.22820),
+                type: 'info'
+            }, {
+                position: new google.maps.LatLng(-33.91747, 151.22912),
+                type: 'info'
+            }, {
+                position: new google.maps.LatLng(-33.91910, 151.22907),
+                type: 'info'
+            }
+        ];
+
+        // Create markers.
+        for (let i = 0; i < locations.length; i++) {
+            let marker = new google.maps.Marker({
+                position: features[i].position,
+                // icon: icons[features[i].type].icon,
+                map: map
+            });
+        };
+
+        let contentString = '<div id="content">'+
+            '<div id="siteNotice">'+
+            '</div>'+
+            '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
+            '<div id="bodyContent">'+
+            '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+            'sandstone rock formation in the southern part of the '+
+            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+
+            'south west of the nearest large town, Alice Springs; 450&#160;km '+
+            '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+
+            'features of the Uluru - Kata Tjuta National Park. Uluru is '+
+            'sacred to the Pitjantjatjara and Yankunytjatjara, the '+
+            'Aboriginal people of the area. It has many springs, waterholes, '+
+            'rock caves and ancient paintings. Uluru is listed as a World '+
+            'Heritage Site.</p>'+
+            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+            'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+            '(last visited June 22, 2009).</p>'+
+            '</div>'+
+            '</div>';
+
+        // let infowindow = new google.maps.InfoWindow({
+        //     content: contentString,
+        //     maxWidth: 300
+        // });
+
+        // let marker = new google.maps.Marker({
+        //     position: uluru,
+        //     map: map,
+        //     title: 'Uluru (Ayers Rock)'
+        // });
+        // marker.addListener('click', function() {
+        //     infowindow.open(map, marker);
+        // });
+    }
+</script>
+
 </body>
 </html>

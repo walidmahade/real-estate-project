@@ -1,0 +1,1041 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jaizer - RealEstate</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/icofont.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="add-offset-top">
+
+<header class="header" id="site-header">
+    <div class="container">
+        <div class="row align-items-center justify-content-between">
+
+            <div class="brand col-6 col-md-2">
+                <img src="img/logo.png" class="img-fluid" alt="">
+            </div>
+
+            <div id="mobile-menu-icon" class="col-6 text-right">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384.97 384.97"><path d="M12.03 120.303h360.9c6.64 0 12.03-5.4 12.03-12.03s-5.4-12.03-12.03-12.03H12.03c-6.64 0-12.03 5.4-12.03 12.03a12.04 12.04 0 0 0 12.03 12.03zm360.9 60.152H12.03c-6.64 0-12.03 5.4-12.03 12.03a12.04 12.04 0 0 0 12.03 12.03h360.9c6.64 0 12.03-5.4 12.03-12.03s-5.4-12.03-12.03-12.03zm0 84.212H132.333c-6.64 0-12.03 5.4-12.03 12.03s5.4 12.03 12.03 12.03H372.94c6.64 0 12.03-5.4 12.03-12.03s-5.4-12.03-12.03-12.03z"/></svg>
+            </div>
+
+            <div class="menu-wrap col-12 col-md-10" id="main-menu-js">
+                <div id="mobile-menu-close">
+                    <i class="icofont-close-circled"></i>
+                </div>
+
+                <nav class="main-menu">
+                    <ul class="menu-items__wrap list-unstyled">
+                        <li class="main-menu__item"><a href="#">About</a></li>
+                        <li class="main-menu__item main-menu__item--active"><a href="#">Gallery</a></li>
+                        <li class="main-menu__item"><a href="#">Apartment</a></li>
+                        <li class="main-menu__item"><a href="#">Pricing</a></li>
+                        <li class="main-menu__item"><a href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header__cta">
+                    <div class="search">
+                        <span class="icon iocn--search">
+                            <i class="icofont-search"></i>
+                        </span>
+                        <span>Search</span>
+                    </div>
+                    <div class="add-property">
+                        <a href="add-property.html" class="btn btn-primary">
+                            <span class="icon icon--plus">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/></svg>
+                            </span>
+                            <span>Add Property</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--menu wrap end-->
+        </div>
+        <!--row end-->
+    </div>
+    <!--container  end-->
+</header>
+
+<section id="search-property" class="section" data-js-header-offset>
+    <form action="" class="d-block w-100">
+        <div class="container-fluid">
+            <div class="row">
+                <!--rent or buy-->
+                <div class="col-12 col-md-4 col-lg-auto">
+                    <div class="input-group input-group--select-wrap">
+                        <label for="buy_rent_select">
+                            <i class="icofont-rounded-down"></i>
+                        </label>
+                        <select name="buy_rent" id="buy_rent_select" class="form-control">
+                            <option value="buy">Buy</option>
+                            <option value="rent" selected>Rent</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!--search location-->
+                <div class="col-12 col-md-8 col-lg-3">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search By Location">
+                        <div class="input-group-append">
+                            <i class="icofont-search"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!--select location-->
+                <div class="col-6 col-lg-auto">
+                    <div class="input-group input-group--select-wrap">
+                        <label for="location_select">
+                            <i class="icofont-rounded-down"></i>
+                        </label>
+                        <select name="location_select" id="location_select" class="form-control">
+                            <option value="" disabled selected>Location</option>
+                            <option value="buy">New York</option>
+                            <option value="rent">Los Daunced</option>
+                            <option value="rent">Dubai</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!--categories-->
+                <div class="col-6 col-lg-auto">
+                    <div class="input-group input-group--select-wrap">
+                        <label for="categories_select">
+                            <i class="icofont-rounded-down"></i>
+                        </label>
+                        <select name="categories_select" id="categories_select" class="form-control">
+                            <option value="" disabled selected>Categories</option>
+                            <option value="rent">Los Daunced</option>
+                            <option value="rent">Dubai</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!--Budget-->
+                <div class="col-6 col-lg-auto">
+                    <div class="input-group input-group--select-wrap">
+                        <label for="budget_select">
+                            <i class="icofont-rounded-down"></i>
+                        </label>
+                        <select name="budget_select" id="budget_select" class="form-control" placeholder="Budget">
+                            <option value="" disabled selected>Budget</option>
+                            <option value="50">50K</option>
+                            <option value="100">100K</option>
+                            <option value="150">150K</option>
+                            <option value="200">200K</option>
+                            <option value="250">250K</option>
+                            <option value="300">300K</option>
+                            <option value="350">350K</option>
+                            <option value="400">400K</option>
+                            <option value="450">450K</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!--change view-->
+                <div class="col col-lg-auto ml-auto text-right">
+                    <a href="search-map-view.html" class="btn btn--custom-light px-3">
+                        <i class="icofont-google-map"></i>
+                        <span class="btn-text">Map View</span>
+                    </a>
+                </div>
+                <!--end items-->
+            </div>
+        </div>
+    </form>
+</section>
+
+<section id="search-results">
+    <div class="container-fluid">
+        <!--filter row-->
+        <div class="row mb-4 align-items-center">
+            <div class="col-auto mr-auto">
+                <span id="search-result-count" class="font-weight-bold fs-18">200 Results found</span>
+            </div>
+
+            <div class="col-auto ml-auto">
+                <div class="input-group input-group--select-wrap">
+                    <label for="sort-search-result">
+                        <i class="icofont-rounded-down"></i>
+                    </label>
+                    <select name="sort-search-result" id="sort-search-result" class="form-control">
+                        <option value="latest">Date latest</option>
+                        <option value="oldest">Date oldest</option>
+                        <option value="oldest">Price high to low</option>
+                        <option value="oldest">Price low to high</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <!--results row-->
+        <div class="row justify-content-start align-items-center flex-wrap">
+            <!--search result item-->
+            <a href="#" class="search-results__item">
+                <div class="card card--custom">
+                    <div class="search-results__item__img">
+                        <img src="img/featured-slider-img-1.jpg" alt="">
+                    </div>
+                    <div class="search-results__item__favorite">
+                        <i class="icofont-ui-love"></i>
+                    </div>
+
+                    <div class="search-results__item__details">
+                        <h4 class="property-title">Honey Suckle Cottage</h4>
+                        <div class="property-l-p-wrap">
+                            <div class="property-locate">
+                                <span class="pl-icon"><i class="icofont-location-pin"></i></span>
+                                <span>
+                                    North Miami Avenue, Miami,
+                                    FL, USA
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-results__item__footer">
+                        <div class="icon-box-small">
+                            <div class="icon-box-small__item">
+                                <img src="img/bed-icon.svg" alt="">
+                                <h5 class="title">05 beds</h5>
+                            </div>
+
+                            <div class="icon-box-small__item">
+                                <img src="img/bath-iocn.svg" alt="">
+                                <h5 class="title">02 Baths</h5>
+                            </div>
+
+                            <div class="icon-box-small__item">
+                                <img src="img/car-iocn.svg" alt="">
+                                <h5 class="title">Yes</h5>
+                            </div>
+                        </div>
+                        <div class="price-box">
+                            <div class="property-review" data-start-count="4">
+                                <span class="stars">
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                </span>
+                                <span class="review-count">(52)</span>
+                            </div>
+                            <div class="property-price">
+                                $46,205,609
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!--search result item-->
+            <!--search result item-->
+            <a href="#" class="search-results__item">
+                <div class="card card--custom">
+                    <div class="search-results__item__img">
+                        <img src="img/featured-slider-img-1.jpg" alt="">
+                    </div>
+                    <div class="search-results__item__favorite">
+                        <i class="icofont-ui-love"></i>
+                    </div>
+
+                    <div class="search-results__item__details">
+                        <h4 class="property-title">Honey Suckle Cottage</h4>
+                        <div class="property-l-p-wrap">
+                            <div class="property-locate">
+                                <span class="pl-icon"><i class="icofont-location-pin"></i></span>
+                                <span>
+                                    North Miami Avenue, Miami,
+                                    FL, USA
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-results__item__footer">
+                        <div class="icon-box-small">
+                            <div class="icon-box-small__item">
+                                <img src="img/bed-icon.svg" alt="">
+                                <h5 class="title">05 beds</h5>
+                            </div>
+
+                            <div class="icon-box-small__item">
+                                <img src="img/bath-iocn.svg" alt="">
+                                <h5 class="title">02 Baths</h5>
+                            </div>
+
+                            <div class="icon-box-small__item">
+                                <img src="img/car-iocn.svg" alt="">
+                                <h5 class="title">Yes</h5>
+                            </div>
+                        </div>
+                        <div class="price-box">
+                            <div class="property-review" data-start-count="5">
+                                <span class="stars">
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                </span>
+                                <span class="review-count">(102)</span>
+                            </div>
+                            <div class="property-price">
+                                $46,205,609
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!--search result item-->
+            <!--search result item-->
+            <a href="#" class="search-results__item">
+                <div class="card card--custom">
+                    <div class="search-results__item__img">
+                        <img src="img/featured-slider-img-1.jpg" alt="">
+                    </div>
+                    <div class="search-results__item__favorite">
+                        <i class="icofont-ui-love"></i>
+                    </div>
+
+                    <div class="search-results__item__details">
+                        <h4 class="property-title">Honey Suckle Cottage</h4>
+                        <div class="property-l-p-wrap">
+                            <div class="property-locate">
+                                <span class="pl-icon"><i class="icofont-location-pin"></i></span>
+                                <span>
+                                    North Miami Avenue, Miami,
+                                    FL, USA
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-results__item__footer">
+                        <div class="icon-box-small">
+                            <div class="icon-box-small__item">
+                                <img src="img/bed-icon.svg" alt="">
+                                <h5 class="title">05 beds</h5>
+                            </div>
+
+                            <div class="icon-box-small__item">
+                                <img src="img/bath-iocn.svg" alt="">
+                                <h5 class="title">02 Baths</h5>
+                            </div>
+
+                            <div class="icon-box-small__item">
+                                <img src="img/car-iocn.svg" alt="">
+                                <h5 class="title">Yes</h5>
+                            </div>
+                        </div>
+                        <div class="price-box">
+                            <div class="property-review" data-start-count="3">
+                                <span class="stars">
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                </span>
+                                <span class="review-count">(102)</span>
+                            </div>
+                            <div class="property-price">
+                                $46,205,609
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!--search result item-->
+            <!--search result item-->
+            <a href="#" class="search-results__item">
+                <div class="card card--custom">
+                    <div class="search-results__item__img">
+                        <img src="img/featured-slider-img-1.jpg" alt="">
+                    </div>
+                    <div class="search-results__item__favorite">
+                        <i class="icofont-ui-love"></i>
+                    </div>
+
+                    <div class="search-results__item__details">
+                        <h4 class="property-title">Honey Suckle Cottage</h4>
+                        <div class="property-l-p-wrap">
+                            <div class="property-locate">
+                                <span class="pl-icon"><i class="icofont-location-pin"></i></span>
+                                <span>
+                                    North Miami Avenue, Miami,
+                                    FL, USA
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-results__item__footer">
+                        <div class="icon-box-small">
+                            <div class="icon-box-small__item">
+                                <img src="img/bed-icon.svg" alt="">
+                                <h5 class="title">05 beds</h5>
+                            </div>
+
+                            <div class="icon-box-small__item">
+                                <img src="img/bath-iocn.svg" alt="">
+                                <h5 class="title">02 Baths</h5>
+                            </div>
+
+                            <div class="icon-box-small__item">
+                                <img src="img/car-iocn.svg" alt="">
+                                <h5 class="title">Yes</h5>
+                            </div>
+                        </div>
+                        <div class="price-box">
+                            <div class="property-review" data-start-count="3">
+                                <span class="stars">
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                </span>
+                                <span class="review-count">(442)</span>
+                            </div>
+                            <div class="property-price">
+                                $46,205,609
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!--search result item-->
+            <!--search result item-->
+            <a href="#" class="search-results__item">
+                <div class="card card--custom">
+                    <div class="search-results__item__img">
+                        <img src="img/featured-slider-img-1.jpg" alt="">
+                    </div>
+                    <div class="search-results__item__favorite">
+                        <i class="icofont-ui-love"></i>
+                    </div>
+
+                    <div class="search-results__item__details">
+                        <h4 class="property-title">Honey Suckle Cottage</h4>
+                        <div class="property-l-p-wrap">
+                            <div class="property-locate">
+                                <span class="pl-icon"><i class="icofont-location-pin"></i></span>
+                                <span>
+                                    North Miami Avenue, Miami,
+                                    FL, USA
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-results__item__footer">
+                        <div class="icon-box-small">
+                            <div class="icon-box-small__item">
+                                <img src="img/bed-icon.svg" alt="">
+                                <h5 class="title">05 beds</h5>
+                            </div>
+
+                            <div class="icon-box-small__item">
+                                <img src="img/bath-iocn.svg" alt="">
+                                <h5 class="title">02 Baths</h5>
+                            </div>
+
+                            <div class="icon-box-small__item">
+                                <img src="img/car-iocn.svg" alt="">
+                                <h5 class="title">Yes</h5>
+                            </div>
+                        </div>
+                        <div class="price-box">
+                            <div class="property-review" data-start-count="4">
+                                <span class="stars">
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                </span>
+                                <span class="review-count">(52)</span>
+                            </div>
+                            <div class="property-price">
+                                $46,205,609
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!--search result item-->
+            <!--search result item-->
+            <a href="#" class="search-results__item">
+                <div class="card card--custom">
+                    <div class="search-results__item__img">
+                        <img src="img/featured-slider-img-1.jpg" alt="">
+                    </div>
+                    <div class="search-results__item__favorite">
+                        <i class="icofont-ui-love"></i>
+                    </div>
+
+                    <div class="search-results__item__details">
+                        <h4 class="property-title">Honey Suckle Cottage</h4>
+                        <div class="property-l-p-wrap">
+                            <div class="property-locate">
+                                <span class="pl-icon"><i class="icofont-location-pin"></i></span>
+                                <span>
+                                    North Miami Avenue, Miami,
+                                    FL, USA
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-results__item__footer">
+                        <div class="icon-box-small">
+                            <div class="icon-box-small__item">
+                                <img src="img/bed-icon.svg" alt="">
+                                <h5 class="title">05 beds</h5>
+                            </div>
+
+                            <div class="icon-box-small__item">
+                                <img src="img/bath-iocn.svg" alt="">
+                                <h5 class="title">02 Baths</h5>
+                            </div>
+
+                            <div class="icon-box-small__item">
+                                <img src="img/car-iocn.svg" alt="">
+                                <h5 class="title">Yes</h5>
+                            </div>
+                        </div>
+                        <div class="price-box">
+                            <div class="property-review" data-start-count="5">
+                                <span class="stars">
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                </span>
+                                <span class="review-count">(102)</span>
+                            </div>
+                            <div class="property-price">
+                                $46,205,609
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!--search result item-->
+            <!--search result item-->
+            <a href="#" class="search-results__item">
+                <div class="card card--custom">
+                    <div class="search-results__item__img">
+                        <img src="img/featured-slider-img-1.jpg" alt="">
+                    </div>
+                    <div class="search-results__item__favorite">
+                        <i class="icofont-ui-love"></i>
+                    </div>
+
+                    <div class="search-results__item__details">
+                        <h4 class="property-title">Honey Suckle Cottage</h4>
+                        <div class="property-l-p-wrap">
+                            <div class="property-locate">
+                                <span class="pl-icon"><i class="icofont-location-pin"></i></span>
+                                <span>
+                                    North Miami Avenue, Miami,
+                                    FL, USA
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-results__item__footer">
+                        <div class="icon-box-small">
+                            <div class="icon-box-small__item">
+                                <img src="img/bed-icon.svg" alt="">
+                                <h5 class="title">05 beds</h5>
+                            </div>
+
+                            <div class="icon-box-small__item">
+                                <img src="img/bath-iocn.svg" alt="">
+                                <h5 class="title">02 Baths</h5>
+                            </div>
+
+                            <div class="icon-box-small__item">
+                                <img src="img/car-iocn.svg" alt="">
+                                <h5 class="title">Yes</h5>
+                            </div>
+                        </div>
+                        <div class="price-box">
+                            <div class="property-review" data-start-count="3">
+                                <span class="stars">
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                </span>
+                                <span class="review-count">(102)</span>
+                            </div>
+                            <div class="property-price">
+                                $46,205,609
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!--search result item-->
+            <!--search result item-->
+            <a href="#" class="search-results__item">
+                <div class="card card--custom">
+                    <div class="search-results__item__img">
+                        <img src="img/featured-slider-img-1.jpg" alt="">
+                    </div>
+                    <div class="search-results__item__favorite">
+                        <i class="icofont-ui-love"></i>
+                    </div>
+
+                    <div class="search-results__item__details">
+                        <h4 class="property-title">Honey Suckle Cottage</h4>
+                        <div class="property-l-p-wrap">
+                            <div class="property-locate">
+                                <span class="pl-icon"><i class="icofont-location-pin"></i></span>
+                                <span>
+                                    North Miami Avenue, Miami,
+                                    FL, USA
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-results__item__footer">
+                        <div class="icon-box-small">
+                            <div class="icon-box-small__item">
+                                <img src="img/bed-icon.svg" alt="">
+                                <h5 class="title">05 beds</h5>
+                            </div>
+
+                            <div class="icon-box-small__item">
+                                <img src="img/bath-iocn.svg" alt="">
+                                <h5 class="title">02 Baths</h5>
+                            </div>
+
+                            <div class="icon-box-small__item">
+                                <img src="img/car-iocn.svg" alt="">
+                                <h5 class="title">Yes</h5>
+                            </div>
+                        </div>
+                        <div class="price-box">
+                            <div class="property-review" data-start-count="3">
+                                <span class="stars">
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                </span>
+                                <span class="review-count">(442)</span>
+                            </div>
+                            <div class="property-price">
+                                $46,205,609
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!--search result item-->
+            <!--search result item-->
+            <a href="#" class="search-results__item">
+                <div class="card card--custom">
+                    <div class="search-results__item__img">
+                        <img src="img/featured-slider-img-1.jpg" alt="">
+                    </div>
+                    <div class="search-results__item__favorite">
+                        <i class="icofont-ui-love"></i>
+                    </div>
+
+                    <div class="search-results__item__details">
+                        <h4 class="property-title">Honey Suckle Cottage</h4>
+                        <div class="property-l-p-wrap">
+                            <div class="property-locate">
+                                <span class="pl-icon"><i class="icofont-location-pin"></i></span>
+                                <span>
+                                    North Miami Avenue, Miami,
+                                    FL, USA
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-results__item__footer">
+                        <div class="icon-box-small">
+                            <div class="icon-box-small__item">
+                                <img src="img/bed-icon.svg" alt="">
+                                <h5 class="title">05 beds</h5>
+                            </div>
+
+                            <div class="icon-box-small__item">
+                                <img src="img/bath-iocn.svg" alt="">
+                                <h5 class="title">02 Baths</h5>
+                            </div>
+
+                            <div class="icon-box-small__item">
+                                <img src="img/car-iocn.svg" alt="">
+                                <h5 class="title">Yes</h5>
+                            </div>
+                        </div>
+                        <div class="price-box">
+                            <div class="property-review" data-start-count="4">
+                                <span class="stars">
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                </span>
+                                <span class="review-count">(52)</span>
+                            </div>
+                            <div class="property-price">
+                                $46,205,609
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!--search result item-->
+            <!--search result item-->
+            <a href="#" class="search-results__item">
+                <div class="card card--custom">
+                    <div class="search-results__item__img">
+                        <img src="img/featured-slider-img-1.jpg" alt="">
+                    </div>
+                    <div class="search-results__item__favorite">
+                        <i class="icofont-ui-love"></i>
+                    </div>
+
+                    <div class="search-results__item__details">
+                        <h4 class="property-title">Honey Suckle Cottage</h4>
+                        <div class="property-l-p-wrap">
+                            <div class="property-locate">
+                                <span class="pl-icon"><i class="icofont-location-pin"></i></span>
+                                <span>
+                                    North Miami Avenue, Miami,
+                                    FL, USA
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-results__item__footer">
+                        <div class="icon-box-small">
+                            <div class="icon-box-small__item">
+                                <img src="img/bed-icon.svg" alt="">
+                                <h5 class="title">05 beds</h5>
+                            </div>
+
+                            <div class="icon-box-small__item">
+                                <img src="img/bath-iocn.svg" alt="">
+                                <h5 class="title">02 Baths</h5>
+                            </div>
+
+                            <div class="icon-box-small__item">
+                                <img src="img/car-iocn.svg" alt="">
+                                <h5 class="title">Yes</h5>
+                            </div>
+                        </div>
+                        <div class="price-box">
+                            <div class="property-review" data-start-count="5">
+                                <span class="stars">
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                </span>
+                                <span class="review-count">(102)</span>
+                            </div>
+                            <div class="property-price">
+                                $46,205,609
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!--search result item-->
+            <!--search result item-->
+            <a href="#" class="search-results__item">
+                <div class="card card--custom">
+                    <div class="search-results__item__img">
+                        <img src="img/featured-slider-img-1.jpg" alt="">
+                    </div>
+                    <div class="search-results__item__favorite">
+                        <i class="icofont-ui-love"></i>
+                    </div>
+
+                    <div class="search-results__item__details">
+                        <h4 class="property-title">Honey Suckle Cottage</h4>
+                        <div class="property-l-p-wrap">
+                            <div class="property-locate">
+                                <span class="pl-icon"><i class="icofont-location-pin"></i></span>
+                                <span>
+                                    North Miami Avenue, Miami,
+                                    FL, USA
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-results__item__footer">
+                        <div class="icon-box-small">
+                            <div class="icon-box-small__item">
+                                <img src="img/bed-icon.svg" alt="">
+                                <h5 class="title">05 beds</h5>
+                            </div>
+
+                            <div class="icon-box-small__item">
+                                <img src="img/bath-iocn.svg" alt="">
+                                <h5 class="title">02 Baths</h5>
+                            </div>
+
+                            <div class="icon-box-small__item">
+                                <img src="img/car-iocn.svg" alt="">
+                                <h5 class="title">Yes</h5>
+                            </div>
+                        </div>
+                        <div class="price-box">
+                            <div class="property-review" data-start-count="3">
+                                <span class="stars">
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                </span>
+                                <span class="review-count">(102)</span>
+                            </div>
+                            <div class="property-price">
+                                $46,205,609
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!--search result item-->
+            <!--search result item-->
+            <a href="#" class="search-results__item">
+                <div class="card card--custom">
+                    <div class="search-results__item__img">
+                        <img src="img/featured-slider-img-1.jpg" alt="">
+                    </div>
+                    <div class="search-results__item__favorite">
+                        <i class="icofont-ui-love"></i>
+                    </div>
+
+                    <div class="search-results__item__details">
+                        <h4 class="property-title">Honey Suckle Cottage</h4>
+                        <div class="property-l-p-wrap">
+                            <div class="property-locate">
+                                <span class="pl-icon"><i class="icofont-location-pin"></i></span>
+                                <span>
+                                    North Miami Avenue, Miami,
+                                    FL, USA
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="search-results__item__footer">
+                        <div class="icon-box-small">
+                            <div class="icon-box-small__item">
+                                <img src="img/bed-icon.svg" alt="">
+                                <h5 class="title">05 beds</h5>
+                            </div>
+
+                            <div class="icon-box-small__item">
+                                <img src="img/bath-iocn.svg" alt="">
+                                <h5 class="title">02 Baths</h5>
+                            </div>
+
+                            <div class="icon-box-small__item">
+                                <img src="img/car-iocn.svg" alt="">
+                                <h5 class="title">Yes</h5>
+                            </div>
+                        </div>
+                        <div class="price-box">
+                            <div class="property-review" data-start-count="3">
+                                <span class="stars">
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                    <i class="icofont-star"></i>
+                                </span>
+                                <span class="review-count">(442)</span>
+                            </div>
+                            <div class="property-price">
+                                $46,205,609
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <!--search result item-->
+        </div>
+
+        <div class="row search-results__pagination justify-content-center">
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">
+                            <i class="icofont-simple-left"></i>
+                        </a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item"><a class="page-link" href="#">5</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">
+                            <i class="icofont-simple-right"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</section>
+
+
+<section id="contact-us">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-5 col--address">
+                <h3 class="fs-40 font-weight-bold w-100 title">Say Hello to us</h3>
+                <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate distinctio eum iste minima odio quae quas. Dolores magnam nisi obcaecati odio tempora tempore unde voluptatibus. Debitis facere vel vitae voluptas.</p>
+                <div class="address-lineoitem">
+                    <p class="text-primary font-weight-bold">Address</p>
+                    <p>1066 Budapest, Zichy jano Street 2</p>
+                </div>
+                <div class="address-lineoitem">
+                    <p class="text-primary font-weight-bold">phone</p>
+                    <p>+880199456</p>
+                </div>
+                <div class="address-lineoitem">
+                    <p class="text-primary font-weight-bold">Email</p>
+                    <p>example@domain.com</p>
+                </div>
+            </div>
+
+            <div class="col-12 col-lg-7 col--form">
+                <div class="contact-form-wrapper">
+                    <form class="">
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <!--<label for="inputEmail4">Name</label>-->
+                                <input type="text" class="form-control" id="inputEmail4" placeholder="Your Name">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <!--<label for="inputPassword4">Phone</label>-->
+                                <input type="text" class="form-control" id="inputPassword4" placeholder="Phone Number">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <!--<label for="inputAddress">Email</label>-->
+                            <input type="Email" class="form-control" id="inputAddress" placeholder="test@live.com">
+                        </div>
+
+                        <div class="form-group">
+                            <!--<label for="inputAddress2">Address 2</label>-->
+                            <textarea type="text" class="form-control" rows="10" id="inputAddress2" placeholder="How can we help you?"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary w-100">Contact Us</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<Footer class="site-footer bg-dark">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-7 col-lg-4">
+                <h4 class="footer-col-title">Contact Us</h4>
+                <ul class="footer__links">
+                    <li>Address: 20/F Green Road, California</li>
+                    <li>Email: info@jaizerproperties.com</li>
+                    <li>Phone: +234 4567 6789</li>
+                    <li>Fax: +XXXX XXXX XXX</li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-md-5 col-lg-2">
+                <h4 class="footer-col-title">Quick Links</h4>
+                <ul class="footer__links">
+                    <li><a href="#">Properties Listing</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">Services</a></li>
+                </ul>
+            </div>
+
+            <div class="col-6 col-md-4 col-lg-2">
+                <h4 class="footer-col-title">Resources</h4>
+                <ul class="footer__links">
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Property Details</a></li>
+                </ul>
+            </div>
+
+            <div class="col-12 col-md-8 col-lg-4">
+                <h4 class="footer-col-title">Subscribe</h4>
+                <div class="subscribe-form">
+                    <form>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                                <span class="input-group-text bg-primary text-light" id="basic-addon2">Subscribe</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="social-links">
+                    <a href="#" class="social-link-facebook">
+                        <i class="icofont-facebook"></i>
+                    </a>
+                    <a href="#" class="social-link-twitter">
+                        <i class="icofont-twitter"></i>
+                    </a>
+                    <a href="#" class="social-link-linkedin">
+                        <i class="icofont-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-link-nstagram">
+                        <i class="icofont-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</Footer>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="js/bootstrap/bootstrap.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

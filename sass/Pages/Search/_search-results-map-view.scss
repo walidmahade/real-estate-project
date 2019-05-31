@@ -1,0 +1,30 @@
+.search-results-map-view {
+  .search-results__item {
+
+    .card--custom {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      border-top-right-radius: 0 !important;
+      border-bottom-left-radius: 14px !important;
+    }
+
+    &__img {
+      border-top-right-radius: 0 !important;
+      border-bottom-left-radius: 14px !important;
+
+      img {
+        border-top-right-radius: 0 !important;
+        border-bottom-left-radius: 14px !important;
+      }
+    }
+
+    &__left {
+      width: 40%;
+      position: relative;
+    }
+    &__right {
+      width: 58%;
+    }
+  }
+}

@@ -1,7 +1,45 @@
 @import "customize-bootstrap";
 @import "bootstrap/bootstrap";
 
+/*------  settings -------*/
+@import "typography";
+@import "modules/section-bg";
 
 /*------  sections -------*/
 @import "sections/header";
-@import "sections/hero";
+@import "sections/inner-page-hero";
+@import "sections/contact";
+@import "sections/footer";
+@import "sections/search-fullscreen";
+
+/*===============================
+              pages
+================================*/
+/*------  Home:page -------*/
+@import "Pages/Home/hero";
+@import "Pages/Home/about";
+@import "Pages/Home/featured-gallery";
+@import "Pages/Home/featured-homes";
+@import "Pages/Home/floor-plan";
+@import "Pages/Home/nearby-location";
+@import "Pages/Home/mortgage-calculator";
+
+/*------  search:page -------*/
+@import "Pages/Search/search-bar";
+@import "Pages/Search/search-result";
+@import "Pages/Search/search-results-map-view";
+
+/*------  about:page -------*/
+@import "Pages/about/inner-hero";
+@import "Pages/about/faq";
+@import "Pages/about/testimonial-slider";
+
+/*------  add property:page -------*/
+@import "Pages/add-property/add-property";
+
+/*------  listings:page -------*/
+@import "Pages/Listing/listing";
+@import "Pages/Listing/filters";
+@import "Pages/Listing/recent-properties-card";
+@import "Pages/Listing/search-result";
+@import "Pages/Listing/mobile-filters";

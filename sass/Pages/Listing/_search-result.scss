@@ -1,0 +1,16 @@
+.search-results-row {
+  display: flex;
+
+  .search-results__item {
+    width: 100%;
+    //padding: 0 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .search-results-row {
+    .search-results__item {
+      width: 50%;
+    }
+  }
+}
