@@ -9764,7 +9764,8 @@ p {
     display: none; } }
 
 #search-results {
-  padding: 65px 0; }
+  padding: 65px 0;
+  overflow: hidden; }
   #search-results .container-fluid {
     width: 100%;
     max-width: 1500px;

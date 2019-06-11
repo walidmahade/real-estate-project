@@ -2,27 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f3f73553-cc08-45b5-a2b6-2f710a292106" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/thumbnail/01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/Pages/Home/_map.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sass/Pages/Search/_search-filter.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/real-state-jaijer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/real-state-jaijer.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Maps.html" beforeDir="false" afterPath="$PROJECT_DIR$/Maps.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/add-property.html" beforeDir="false" afterPath="$PROJECT_DIR$/add-property.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/design_request.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prepros-6.config" beforeDir="false" afterPath="$PROJECT_DIR$/prepros-6.config" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/Pages/Home/_nearby-location.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/Pages/Home/_nearby-location.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/Pages/Search/_search-results-map-view.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/Pages/Search/_search-results-map-view.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/Pages/add-property/_add-property.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/Pages/add-property/_add-property.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sass/sections/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/sections/_header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search-map-view.html" beforeDir="false" afterPath="$PROJECT_DIR$/search-map-view.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/search.html" beforeDir="false" afterPath="$PROJECT_DIR$/search.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/Pages/Search/_search-result.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/Pages/Search/_search-result.scss" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -60,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/add-property.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="236" column="95" selection-start-line="236" selection-start-column="95" selection-end-line="236" selection-end-column="95" />
+            <state relative-caret-position="148">
+              <caret line="241" lean-forward="true" selection-start-line="241" selection-end-line="241" />
               <folding>
                 <element signature="n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" />
@@ -78,6 +58,27 @@
                 <element signature="e#23821#23855#0" />
                 <element signature="e#24069#24122#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="FIRST">
+              <first_editor>
+                <caret column="10" selection-end-column="50" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sass/Pages/Search/_search-result.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -167,7 +168,6 @@
         <option value="$PROJECT_DIR$/Listing.html" />
         <option value="$PROJECT_DIR$/sass/Pages/Listing/_mobile-filters.scss" />
         <option value="$PROJECT_DIR$/sass/Pages/Search/_search-bar.scss" />
-        <option value="$PROJECT_DIR$/sass/Pages/Search/_search-result.scss" />
         <option value="$PROJECT_DIR$/sass/sections/_search-fullscreen.scss" />
         <option value="$PROJECT_DIR$/sass/Pages/Home/_nearby-location.scss" />
         <option value="$PROJECT_DIR$/Maps.html" />
@@ -184,6 +184,7 @@
         <option value="$PROJECT_DIR$/sass/Pages/add-property/_add-property.scss" />
         <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/add-property.html" />
+        <option value="$PROJECT_DIR$/sass/Pages/Search/_search-result.scss" />
       </list>
     </option>
   </component>
@@ -311,12 +312,12 @@
       <workItem from="1559553849214" duration="147000" />
       <workItem from="1560242012189" duration="1754000" />
       <workItem from="1560262480797" duration="4705000" />
-      <workItem from="1560276373769" duration="4403000" />
+      <workItem from="1560276373769" duration="4612000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="180579000" />
+    <option name="totallyTimeSpent" value="180788000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="162" y="0" width="1758" height="1080" extended-state="0" />
@@ -325,7 +326,7 @@
       <window_info id="Favorites" order="0" side_tool="true" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.16154721" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.44234404" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.51984876" />
       <window_info anchor="bottom" id="Database Changes" order="1" />
       <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="3" />
@@ -619,16 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="FIRST">
-          <first_editor>
-            <caret column="50" lean-forward="true" selection-start-column="50" selection-end-column="50" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/sass/sections/_header.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
@@ -640,13 +631,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
           <caret line="57" column="14" lean-forward="true" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sass/Pages/Search/_search-result.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="948">
-          <caret line="57" column="46" selection-start-line="57" selection-start-column="46" selection-end-line="57" selection-end-column="46" />
         </state>
       </provider>
     </entry>
@@ -741,8 +725,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/add-property.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="236" column="95" selection-start-line="236" selection-start-column="95" selection-end-line="236" selection-end-column="95" />
+        <state relative-caret-position="148">
+          <caret line="241" lean-forward="true" selection-start-line="241" selection-end-line="241" />
           <folding>
             <element signature="n#div#2;n#form#0;n#div#0;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#3;n#form#0;n#div#0;n#div#0;n#div#0;n#section#1;n#body#0;n#html#0;n#!!top" />
@@ -756,6 +740,23 @@
             <element signature="e#23821#23855#0" />
             <element signature="e#24069#24122#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="FIRST">
+          <first_editor>
+            <caret column="10" selection-end-column="50" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sass/Pages/Search/_search-result.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
         </state>
       </provider>
     </entry>
