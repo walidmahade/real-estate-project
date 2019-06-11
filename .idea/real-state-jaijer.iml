@@ -10,5 +10,7 @@
     <orderEntry type="library" name="jquery-3.4.1" level="application" />
     <orderEntry type="library" name="slick" level="application" />
     <orderEntry type="library" name="location-picker" level="application" />
+    <orderEntry type="library" name="ScrollMagic" level="application" />
+    <orderEntry type="library" name="debug.addIndicators" level="application" />
   </component>
 </module>

@@ -156,7 +156,7 @@
     <div class="container-custom">
         <!--results row-->
         <div class="row">
-            <div class="col-12 col-md-12 col-xl-5">
+            <div class="col-12 col-md-12 col-xl-5" id="search-results-wrap-js-id">
                 <!--filter row-->
                 <div class="row align-items-center">
                     <div class="col-auto mr-auto">
@@ -634,9 +634,10 @@
                 <!--search result pagination end-->
             </div>
             <!--map row-->
-            <div class="col-12 col-md-12 col-xl-7" id="search-result-map">
+<!--            <div id="trigger-sticky"></div>-->
+            <div class="col-12 col-md-12 col-xl-7 " id="search-result-map">
                 <!--section property map-->
-                <div id="property-map" class="sticky-top">
+                <div id="property-map">
                     <div class="map-home" id="map"></div>
                 </div>
                 <!--section property map end -->
@@ -901,9 +902,29 @@
     (function($){
         var _latitude = 36.596165;
         var _longitude = -97.062988;
-        createHomepageGoogleMap(_latitude,_longitude);
-    })(jQuery);
+        createHomepageGoogleMap(_latitude, _longitude);
+    }) (jQuery);
 </script>
-
+<!--property map offset top-->
+<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+<!--<script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>-->
+<script>
+    $(function () { // wait for document ready
+        if ($(window).width() > 1199) {
+        var controller = new ScrollMagic.Controller();
+        // build scene
+        var scene = new ScrollMagic.Scene({
+            triggerElement: "#property-map",
+            triggerHook: 0,
+            duration: function() {
+                return $("#search-results-wrap-js-id").height() - $("#property-map").height();
+            }
+        })
+            .setPin("#property-map", {pushFollowers: false})
+            // .addIndicators({name: "1 (duration: 300)"}) // add indicators (requires plugin)
+            .addTo(controller);
+        } // if desktop, go on with sticky
+    });
+</script>
 </body>
 </html>

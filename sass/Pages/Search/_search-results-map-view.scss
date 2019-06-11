@@ -6,21 +6,16 @@
 
   #property-map,
   #map {
-    height: 86vh !important;
+    height: 100vh !important;
     min-height: 600px;
-  }
-
-  #property-map {
-    top: 100px;
   }
 
   #map {
     margin-top: 65px;
   }
 
-  //#search-result-map {
-  //  position: sticky;
-  //
+  //.search-results-wrap {
+  //  height: auto;
   //}
 
   .search-results__item {

@@ -9952,11 +9952,8 @@ p {
 
 .search-results-map-view #property-map,
 .search-results-map-view #map {
-  height: 86vh !important;
+  height: 100vh !important;
   min-height: 600px; }
-
-.search-results-map-view #property-map {
-  top: 100px; }
 
 .search-results-map-view #map {
   margin-top: 65px; }
