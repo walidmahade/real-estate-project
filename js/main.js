@@ -2,8 +2,18 @@ $(document).ready(function() {
     /*==========================================
             global scripts: (for all page)
     ===========================================*/
+    /*--- add shadow after 150px scroll ---*/
+    $(window).on('scroll', function () {
+       let mw_scrollTop =  $(window).scrollTop();
+
+       if (mw_scrollTop > 150) {
+           $("#site-header").addClass('header--fixed');
+       } else {
+           $("#site-header").removeClass('header--fixed');
+       }
+    });
     /*--- initialize popovers ---*/
-    $('[data-toggle="popover"]').popover()
+    $('[data-toggle="popover"]').popover();
     /*--- dismiss popovers ---*/
     $('.popover-dismiss').popover({
         trigger: 'focus'
@@ -16,6 +26,17 @@ $(document).ready(function() {
         let headerHeight = $("#site-header").outerHeight();
         headerOffsetTarget.css('margin-top', headerHeight)
     }
+    /*----- search filter trigger ------*/
+    $("#search-filter-trigger").click(function (e) {
+        e.preventDefault();
+        $("#filter-form").toggleClass("show");
+    });
+    function closeFilterForm() {
+        $("#filter-form").removeClass("show");
+    }
+    $(".close-form-filter").click(function () {
+        closeFilterForm();
+    });
     /*-----------------------------------------
         change accordion behaviour: all pages
         add a class for easy css styling
@@ -215,9 +236,10 @@ $(document).ready(function() {
     /*============================================================
         add property page scripts
     ==============================================================*/
+    let addGalleryImageUploadField = $("#add-gallery-images");
     let uploadedFilesInfoWrapper = $("#uploaded-files-info");
 
-    $("#add-gallery-images").change(function(e) {
+    addGalleryImageUploadField.change(function(e) {
         // let fileName = e.target.files[0].name;
         let fileName = e.target.files;
         // alert('The file "' + fileName +  '" has been selected.');
@@ -228,10 +250,18 @@ $(document).ready(function() {
             uploadedFilesInfoWrapper.append(`
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     ${fileName[i].name}
-                    <span class="badge delete-uploaded-img" data-file="files_${i}"><i class="icofont-ui-delete"></i></span>
+                    <span class="badge delete-uploaded-img" data-file="files_${i}"></span>
                 </li>
             `)
         }
+        $("#clear-uplaod-field").removeClass('d-none').addClass('d-inline-block');
+    });
+
+    $("#clear-uplaod-field").click(function (e) {
+        e.preventDefault();
+        addGalleryImageUploadField.replaceWith(addGalleryImageUploadField.val('').clone(true));
+        uploadedFilesInfoWrapper.empty();
+        $(this).addClass('d-none').removeClass('d-inline-block');
     });
 
     /*============================================================

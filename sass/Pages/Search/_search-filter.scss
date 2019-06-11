@@ -1,0 +1,47 @@
+#filter-form {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  max-width: 500px;
+  height: 100%;
+  overflow: auto;
+  z-index: 99999;
+  background-color: #fff;
+  box-shadow: 0 0 10px 2px rgba(0,0,0,.1);
+  margin-right: -530px;
+  transition: margin-right .3s ease-in-out;
+
+  &.show {
+    margin-right: 0;
+  }
+
+  .btn-group-toggle {
+    background-color: #ebebeb;
+    border-radius: 4px;
+
+    .btn {
+      font-weight: 400;
+      border-right: 1px solid #fff;
+      //margin-right: 4px;
+    }
+
+    .active {
+      background-color: $primary;
+    }
+  }
+
+  .label-custom {
+    font-weight: 700;
+  }
+}
+
+.close-form-filter {
+  i {
+    transition: .3s;
+    cursor: pointer;
+    &:hover {
+      color: $primary;
+    }
+  }
+}

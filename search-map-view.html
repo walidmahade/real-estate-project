@@ -108,20 +108,6 @@
                     </div>
                 </div>
 
-                <!--categories-->
-                <div class="col-6 col-lg-auto">
-                    <div class="input-group input-group--select-wrap">
-                        <label for="categories_select">
-                            <i class="icofont-rounded-down"></i>
-                        </label>
-                        <select name="categories_select" id="categories_select" class="form-control">
-                            <option value="" disabled selected>Categories</option>
-                            <option value="rent">Los Daunced</option>
-                            <option value="rent">Dubai</option>
-                        </select>
-                    </div>
-                </div>
-
                 <!--Budget-->
                 <div class="col-6 col-lg-auto">
                     <div class="input-group input-group--select-wrap">
@@ -143,6 +129,14 @@
                     </div>
                 </div>
 
+                <!--filters-->
+                <div class="col-6 col-lg-auto">
+                    <a href="#" class="btn btn--custom-light px-3" id="search-filter-trigger">
+                        <i class="icofont-list"></i>
+                        <span class="btn-text">Filters</span>
+                    </a>
+                </div>
+
                 <!--change view-->
                 <div class="col col-lg-auto ml-auto text-right">
                     <a href="search.html" class="btn btn--custom-light px-3 active">
@@ -159,10 +153,10 @@
 
 
 <section id="search-results" class="search-results-map-view">
-    <div class="container-fluid">
+    <div class="container-custom">
         <!--results row-->
         <div class="row">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-md-12 col-xl-5">
                 <!--filter row-->
                 <div class="row align-items-center">
                     <div class="col-auto mr-auto">
@@ -189,10 +183,7 @@
                     <!--search result item-->
                     <a href="#" class="search-results__item">
                         <div class="card card--custom">
-                            <div class="search-results__item__left">
-                                <div class="search-results__item__img">
-                                    <img src="img/featured-slider-img-1.jpg" alt="">
-                                </div>
+                            <div class="search-results__item__left" style="background-image: url(img/featured-slider-img-1.jpg)">
                                 <div class="search-results__item__favorite">
                                     <i class="icofont-ui-love"></i>
                                 </div>
@@ -253,10 +244,7 @@
                     <!--search result item-->
                     <a href="#" class="search-results__item">
                         <div class="card card--custom">
-                            <div class="search-results__item__left">
-                                <div class="search-results__item__img">
-                                    <img src="img/featured-slider-img-1.jpg" alt="">
-                                </div>
+                            <div class="search-results__item__left" style="background-image: url(img/featured-slider-img-1.jpg)">
                                 <div class="search-results__item__favorite">
                                     <i class="icofont-ui-love"></i>
                                 </div>
@@ -317,10 +305,7 @@
                     <!--search result item-->
                     <a href="#" class="search-results__item">
                         <div class="card card--custom">
-                            <div class="search-results__item__left">
-                                <div class="search-results__item__img">
-                                    <img src="img/featured-slider-img-1.jpg" alt="">
-                                </div>
+                            <div class="search-results__item__left" style="background-image: url(img/featured-slider-img-1.jpg)">
                                 <div class="search-results__item__favorite">
                                     <i class="icofont-ui-love"></i>
                                 </div>
@@ -381,10 +366,7 @@
                     <!--search result item-->
                     <a href="#" class="search-results__item">
                         <div class="card card--custom">
-                            <div class="search-results__item__left">
-                                <div class="search-results__item__img">
-                                    <img src="img/featured-slider-img-1.jpg" alt="">
-                                </div>
+                            <div class="search-results__item__left" style="background-image: url(img/featured-slider-img-1.jpg)">
                                 <div class="search-results__item__favorite">
                                     <i class="icofont-ui-love"></i>
                                 </div>
@@ -445,10 +427,7 @@
                     <!--search result item-->
                     <a href="#" class="search-results__item">
                         <div class="card card--custom">
-                            <div class="search-results__item__left">
-                                <div class="search-results__item__img">
-                                    <img src="img/featured-slider-img-1.jpg" alt="">
-                                </div>
+                            <div class="search-results__item__left" style="background-image: url(img/featured-slider-img-1.jpg)">
                                 <div class="search-results__item__favorite">
                                     <i class="icofont-ui-love"></i>
                                 </div>
@@ -509,10 +488,68 @@
                     <!--search result item-->
                     <a href="#" class="search-results__item">
                         <div class="card card--custom">
-                            <div class="search-results__item__left">
-                                <div class="search-results__item__img">
-                                    <img src="img/featured-slider-img-1.jpg" alt="">
+                            <div class="search-results__item__left" style="background-image: url(img/featured-slider-img-1.jpg)">
+                                <div class="search-results__item__favorite">
+                                    <i class="icofont-ui-love"></i>
                                 </div>
+                            </div>
+
+                            <div class="search-results__item__right">
+                                <div class="search-results__item__details">
+                                    <h4 class="property-title">Honey Suckle Cottage</h4>
+                                    <div class="property-l-p-wrap">
+                                        <div class="property-locate">
+                                            <span class="pl-icon"><i class="icofont-location-pin"></i></span>
+                                            <span>
+                                        North Miami Avenue, Miami,
+                                        FL, USA
+                                    </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="search-results__item__footer">
+                                    <div class="icon-box-small">
+                                        <div class="icon-box-small__item">
+                                            <img src="img/bed-icon.svg" alt="">
+                                            <h5 class="title">05 beds</h5>
+                                        </div>
+
+                                        <div class="icon-box-small__item">
+                                            <img src="img/bath-iocn.svg" alt="">
+                                            <h5 class="title">02 Baths</h5>
+                                        </div>
+
+                                        <div class="icon-box-small__item">
+                                            <img src="img/car-iocn.svg" alt="">
+                                            <h5 class="title">Yes</h5>
+                                        </div>
+                                    </div>
+                                    <div class="price-box">
+                                        <div class="property-review" data-start-count="4">
+                                    <span class="stars">
+                                        <i class="icofont-star"></i>
+                                        <i class="icofont-star"></i>
+                                        <i class="icofont-star"></i>
+                                        <i class="icofont-star"></i>
+                                        <i class="icofont-star"></i>
+                                    </span>
+                                            <span class="review-count">(52)</span>
+                                        </div>
+                                        <div class="property-price">
+                                            $46,205,609
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--search-results__item__right end-->
+                        </div>
+                    </a>
+                    <!--search result item-->
+                    <!--search result item-->
+                    <a href="#" class="search-results__item">
+                        <div class="card card--custom">
+                            <div class="search-results__item__left" style="background-image: url(img/featured-slider-img-1.jpg)">
                                 <div class="search-results__item__favorite">
                                     <i class="icofont-ui-love"></i>
                                 </div>
@@ -597,8 +634,12 @@
                 <!--search result pagination end-->
             </div>
             <!--map row-->
-            <div class="col-12 col-md-6">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1811.333804629487!2d90.38909470824068!3d24.772583231411968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x37564edcc822d795%3A0xbed80524c95cfae0!2sUttara+Residential+Area%2C+Mymensingh!5e0!3m2!1sen!2sbd!4v1558999400678!5m2!1sen!2sbd" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div class="col-12 col-md-12 col-xl-7" id="search-result-map">
+                <!--section property map-->
+                <div id="property-map" class="sticky-top">
+                    <div class="map-home" id="map"></div>
+                </div>
+                <!--section property map end -->
             </div>
         </div>
         <!--results row end-->
@@ -722,10 +763,147 @@
 
 </Footer>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!--filter form for search and map view search page-->
+<section id="filter-form">
+    <div class="close-form-filter text-right fs-30 pr-4">
+        <i class="icofont-close-circled"></i>
+    </div>
+    <form class="filter-form-wrapper px-4 pt-2 pb-4 d-block">
+        <!--loation-->
+        <div class="form-group">
+            <label for="exclude-location" class="label-custom">Exclude Locations</label>
+            <input type="text" class="form-control" id="exclude-location">
+        </div>
+        <!--beds-->
+
+        <div class="form-group mt-5">
+            <div class="pb-2 label-custom">Beds: </div>
+
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn active">
+                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Studio
+                </label>
+                <label class="btn">
+                    <input type="radio" name="options" id="option2" autocomplete="off"> 1
+                </label>
+                <label class="btn">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> 2
+                </label>
+                <label class="btn">
+                    <input type="radio" name="options" id="option4" autocomplete="off"> 3
+                </label>
+                <label class="btn">
+                    <input type="radio" name="options" id="option5" autocomplete="off"> 5
+                </label>
+                <label class="btn">
+                    <input type="radio" name="options" id="option6" autocomplete="off"> 6
+                </label>
+            </div>
+        </div>
+
+        <!--category-->
+        <div class="form-group mt-5">
+            <div class="pb-2 label-custom">Category: </div>
+
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn active">
+                    <input type="radio" name="options" id="category1" autocomplete="off" checked> Studio
+                </label>
+                <label class="btn">
+                    <input type="radio" name="options" id="category2" autocomplete="off"> Apartment
+                </label>
+                <label class="btn">
+                    <input type="radio" name="options" id="category3" autocomplete="off"> Restaurant
+                </label>
+                <label class="btn">
+                    <input type="radio" name="options" id="category4" autocomplete="off"> Big
+                </label>
+            </div>
+        </div>
+
+        <!--furniture-->
+        <div class="form-group mt-5">
+            <div class="pb-2 label-custom">Furniture: </div>
+
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn active">
+                    <input type="radio" name="options" id="furniture1" autocomplete="off" checked> Unfurnished
+                </label>
+                <label class="btn">
+                    <input type="radio" name="options" id="furniture2" autocomplete="off"> Furnished
+                </label>
+                <label class="btn">
+                    <input type="radio" name="options" id="furniture3" autocomplete="off"> Partially Furnished
+                </label>
+            </div>
+        </div>
+
+        <!--price-->
+        <div class="form-row mt-5">
+            <div class="form-group col-12">
+                <div class="label-custom">Price</div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="min-price" class="fs-16">Min</label>
+                <input type="number" class="form-control" id="min-price" placeholder="$0">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="max-price" class="fs-16">Max</label>
+                <input type="number" class="form-control" id="max-price" placeholder="$70,00,000">
+            </div>
+        </div>
+
+        <!--price-->
+        <div class="form-row mt-5">
+            <div class="form-group col-12">
+                <div class="label-custom">Built Up Area</div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="min-price" class="fs-16">Min</label>
+                <input type="number" class="form-control" id="min-area" placeholder="0 sq. ft.">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="max-price" class="fs-16">Max</label>
+                <input type="number" class="form-control" id="max-area" placeholder="20,000 sq. ft.">
+            </div>
+        </div>
+        <!--end of fields-->
+        <div class="form-row mt-4">
+            <div class="form-group">
+                <input type="submit" value="Show Result" class="btn btn-primary font-weight-normal text-white px-4">
+            </div>
+            <div class="form-group">
+                <a href="#" class="close-form-filter btn btn-outline-secondary font-weight-normal text-dark px-3 ml-3">
+                    Cancel
+                </a>
+            </div>
+        </div>
+    </form>
+</section>
+
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="js/bootstrap/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="js/main.js"></script>
+
+<!--map scripts-->
+<!--map scripts-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPZ-Erd-14Vf2AoPW2Pzlxssf6-2R3PPs"></script>
+<script src="js/map/markerwithlabel_packed.js"></script>
+<script src="js/map/infobox.js"></script>
+<script src="js/map/markerclusterer_packed.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/map/custom-map.js"></script>
+<script>
+    // currently visible position of map
+    (function($){
+        var _latitude = 36.596165;
+        var _longitude = -97.062988;
+        createHomepageGoogleMap(_latitude,_longitude);
+    })(jQuery);
+</script>
+
 </body>
 </html>

@@ -28,7 +28,12 @@
 .nearby-location-item {
   z-index: 9;
   position: absolute;
+  cursor: pointer;
+  //opacity: .7;
 
+  //&:hover {
+  //  opacity: 1;
+  //}
 
   &__popovers {
     &:focus {

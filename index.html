@@ -891,8 +891,8 @@
                     <!-- nearby-location-item -->
                     <div class="nearby-location-item" data-id="1">
                         <a tabindex="0" class="nearby-location-item__popovers" role="button"
-                           data-toggle="popover" data-trigger="focus" data-placement="top"
-                           data-content="The Dairy Godmother" data-offset="0, 2">
+                           data-toggle="popover" data-trigger="hover" data-placement="top"
+                           data-content="The Dairy Godmother" data-offset="0, 5">
                             <img src="img/nearby-locations-icon.png" alt="">
                         </a>
                     </div>
@@ -900,8 +900,8 @@
                     <!-- nearby-location-item -->
                     <div class="nearby-location-item" data-id="2">
                         <a tabindex="0" class="nearby-location-item__popovers" role="button"
-                           data-toggle="popover" data-trigger="focus" data-placement="top"
-                           data-content="The Dairy Godmother" data-offset="0, 2">
+                           data-toggle="popover" data-trigger="hover" data-placement="top"
+                           data-content="The Dairy Godmother" data-offset="0, 5">
                             <img src="img/nearby-locations-icon.png" alt="">
                         </a>
                     </div>
@@ -909,8 +909,8 @@
                     <!-- nearby-location-item -->
                     <div class="nearby-location-item" data-id="3">
                         <a tabindex="0" class="nearby-location-item__popovers" role="button"
-                           data-toggle="popover" data-trigger="focus" data-placement="top"
-                           data-content="The Dairy Godmother" data-offset="0, 2">
+                           data-toggle="popover" data-trigger="hover" data-placement="top"
+                           data-content="The Dairy Godmother" data-offset="0, 5">
                             <img src="img/nearby-locations-icon.png" alt="">
                         </a>
                     </div>
@@ -918,8 +918,8 @@
                     <!-- nearby-location-item -->
                     <div class="nearby-location-item" data-id="4">
                         <a tabindex="0" class="nearby-location-item__popovers" role="button"
-                           data-toggle="popover" data-trigger="focus" data-placement="top"
-                           data-content="The Dairy Godmother" data-offset="0, 2">
+                           data-toggle="popover" data-trigger="hover" data-placement="top"
+                           data-content="The Dairy Godmother" data-offset="0, 5">
                             <img src="img/nearby-locations-icon.png" alt="">
                         </a>
                     </div>
@@ -927,8 +927,8 @@
                     <!-- nearby-location-item -->
                     <div class="nearby-location-item" data-id="5">
                         <a tabindex="0" class="nearby-location-item__popovers" role="button"
-                           data-toggle="popover" data-trigger="focus" data-placement="top"
-                           data-content="The Dairy Godmother" data-offset="0, 2">
+                           data-toggle="popover" data-trigger="hover" data-placement="top"
+                           data-content="The Dairy Godmother" data-offset="0, 5">
                             <img src="img/nearby-locations-icon.png" alt="">
                         </a>
                     </div>
@@ -936,8 +936,8 @@
                     <!-- nearby-location-item -->
                     <div class="nearby-location-item" data-id="6">
                         <a tabindex="0" class="nearby-location-item__popovers" role="button"
-                           data-toggle="popover" data-trigger="focus" data-placement="top"
-                           data-content="The Dairy Godmother" data-offset="0, 2">
+                           data-toggle="popover" data-trigger="hover" data-placement="top"
+                           data-content="The Dairy Godmother" data-offset="0, 5">
                             <img src="img/nearby-locations-icon.png" alt="">
                         </a>
                     </div>
@@ -1020,77 +1020,11 @@
     </div>
 </section>
 
-
-
-<style>
-    /* Always set the map height explicitly to define the size of the div
-     * element that contains the map. */
-    #map {
-        height: 600px;
-    }
-    /* Optional: Makes the sample page fill the window. */
-    html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-    }
-
-    /* The popup bubble styling. */
-    .popup-bubble {
-        /* Position the bubble centred-above its parent. */
-        position: absolute;
-        top: 0;
-        left: 0;
-        transform: translate(-50%, -100%);
-        /* Style the bubble. */
-        background-color: white;
-        padding: 5px;
-        border-radius: 5px;
-        font-family: sans-serif;
-        overflow-y: auto;
-        max-height: 60px;
-        box-shadow: 0px 2px 10px 1px rgba(0,0,0,0.5);
-    }
-    /* The parent of the bubble. A zero-height div at the top of the tip. */
-    .popup-bubble-anchor {
-        /* Position the div a fixed distance above the tip. */
-        position: absolute;
-        width: 100%;
-        bottom: /* TIP_HEIGHT= */ 8px;
-        left: 0;
-    }
-    /* This element draws the tip. */
-    .popup-bubble-anchor::after {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        /* Center the tip horizontally. */
-        transform: translate(-50%, 0);
-        /* The tip is a https://css-tricks.com/snippets/css/css-triangle/ */
-        width: 0;
-        height: 0;
-        /* The tip is 8px high, and 12px wide. */
-        border-left: 6px solid transparent;
-        border-right: 6px solid transparent;
-        border-top: /* TIP_HEIGHT= */ 8px solid white;
-    }
-    /* JavaScript will position this div at the bottom of the popup tip. */
-    .popup-container {
-        cursor: auto;
-        height: 0;
-        position: absolute;
-        /* The max width of the info window. */
-        width: 200px;
-    }
-</style>
-
-<!--<section id="property-map">-->
-    <!--<div id="map"></div>-->
-    <!--<div id="content">-->
-        <!--Hello world!-->
-    <!--</div>-->
-<!--</section>-->
+<!--section property map-->
+<section id="property-map">
+    <div class="map-home" id="map"></div>
+</section>
+<!--section property map end -->
 
 <section id="contact-us">
     <div class="container">
@@ -1254,89 +1188,26 @@
     </div>
 </section>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="js/bootstrap/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="js/main.js"></script>
 
-<!--<script async defer-->
-<!--        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCpUU0Y71N721R-TR8Ie69VJ7hMobM0jdo&callback=initMap">-->
-<!--</script>-->
-<!--<script>-->
-<!--    // This example displays a marker at the center of Australia.-->
-<!--    // When the user clicks the marker, an info window opens.-->
-<!--    // The maximum width of the info window is set to 200 pixels.-->
-
-<!--    function initMap() {-->
-<!--        let uluru = {lat: -25.363, lng: 131.044};-->
-
-<!--        let map = new google.maps.Map(document.getElementById('map'), {-->
-<!--            center: new google.maps.LatLng(-33.91722, 151.23064),-->
-<!--            zoom: 16-->
-<!--        });-->
-
-<!--        let locations = [-->
-<!--            {-->
-<!--                position: new google.maps.LatLng(-33.91721, 151.22630),-->
-<!--                type: 'info'-->
-<!--            }, {-->
-<!--                position: new google.maps.LatLng(-33.91539, 151.22820),-->
-<!--                type: 'info'-->
-<!--            }, {-->
-<!--                position: new google.maps.LatLng(-33.91747, 151.22912),-->
-<!--                type: 'info'-->
-<!--            }, {-->
-<!--                position: new google.maps.LatLng(-33.91910, 151.22907),-->
-<!--                type: 'info'-->
-<!--            }-->
-<!--        ];-->
-
-<!--        // Create markers.-->
-<!--        for (let i = 0; i < locations.length; i++) {-->
-<!--            let marker = new google.maps.Marker({-->
-<!--                position: features[i].position,-->
-<!--                // icon: icons[features[i].type].icon,-->
-<!--                map: map-->
-<!--            });-->
-<!--        };-->
-
-<!--        let contentString = '<div id="content">'+-->
-<!--            '<div id="siteNotice">'+-->
-<!--            '</div>'+-->
-<!--            '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+-->
-<!--            '<div id="bodyContent">'+-->
-<!--            '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +-->
-<!--            'sandstone rock formation in the southern part of the '+-->
-<!--            'Northern Territory, central Australia. It lies 335&#160;km (208&#160;mi) '+-->
-<!--            'south west of the nearest large town, Alice Springs; 450&#160;km '+-->
-<!--            '(280&#160;mi) by road. Kata Tjuta and Uluru are the two major '+-->
-<!--            'features of the Uluru - Kata Tjuta National Park. Uluru is '+-->
-<!--            'sacred to the Pitjantjatjara and Yankunytjatjara, the '+-->
-<!--            'Aboriginal people of the area. It has many springs, waterholes, '+-->
-<!--            'rock caves and ancient paintings. Uluru is listed as a World '+-->
-<!--            'Heritage Site.</p>'+-->
-<!--            '<p>Attribution: Uluru, <a href="https://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+-->
-<!--            'https://en.wikipedia.org/w/index.php?title=Uluru</a> '+-->
-<!--            '(last visited June 22, 2009).</p>'+-->
-<!--            '</div>'+-->
-<!--            '</div>';-->
-
-<!--        // let infowindow = new google.maps.InfoWindow({-->
-<!--        //     content: contentString,-->
-<!--        //     maxWidth: 300-->
-<!--        // });-->
-
-<!--        // let marker = new google.maps.Marker({-->
-<!--        //     position: uluru,-->
-<!--        //     map: map,-->
-<!--        //     title: 'Uluru (Ayers Rock)'-->
-<!--        // });-->
-<!--        // marker.addListener('click', function() {-->
-<!--        //     infowindow.open(map, marker);-->
-<!--        // });-->
-<!--    }-->
-<!--</script>-->
-
+<!--map scripts-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPZ-Erd-14Vf2AoPW2Pzlxssf6-2R3PPs"></script>
+<script src="js/map/markerwithlabel_packed.js"></script>
+<script src="js/map/infobox.js"></script>
+<script src="js/map/markerclusterer_packed.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/map/custom-map.js"></script>
+<script>
+    (function($){
+        var _latitude = 36.596165;
+        var _longitude = -97.062988;
+        createHomepageGoogleMap(_latitude,_longitude);
+    })(jQuery);
+</script>
 </body>
 </html>

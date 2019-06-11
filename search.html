@@ -108,20 +108,6 @@
                     </div>
                 </div>
 
-                <!--categories-->
-                <div class="col-6 col-lg-auto">
-                    <div class="input-group input-group--select-wrap">
-                        <label for="categories_select">
-                            <i class="icofont-rounded-down"></i>
-                        </label>
-                        <select name="categories_select" id="categories_select" class="form-control">
-                            <option value="" disabled selected>Categories</option>
-                            <option value="rent">Los Daunced</option>
-                            <option value="rent">Dubai</option>
-                        </select>
-                    </div>
-                </div>
-
                 <!--Budget-->
                 <div class="col-6 col-lg-auto">
                     <div class="input-group input-group--select-wrap">
@@ -141,6 +127,14 @@
                             <option value="450">450K</option>
                         </select>
                     </div>
+                </div>
+
+                <!--filters-->
+                <div class="col-6 col-lg-auto">
+                    <a href="#" class="btn btn--custom-light px-3" id="search-filter-trigger">
+                        <i class="icofont-list"></i>
+                        <span class="btn-text">Filters</span>
+                    </a>
                 </div>
 
                 <!--change view-->
@@ -1031,6 +1025,124 @@
     </div>
 
 </Footer>
+
+<!--filter form for search and map view search page-->
+<section id="filter-form">
+    <div class="close-form-filter text-right fs-30 pr-4">
+        <i class="icofont-close-circled"></i>
+    </div>
+    <form class="filter-form-wrapper px-4 pt-2 pb-4 d-block">
+        <!--loation-->
+        <div class="form-group">
+            <label for="exclude-location" class="label-custom">Exclude Locations</label>
+            <input type="text" class="form-control" id="exclude-location">
+        </div>
+        <!--beds-->
+
+        <div class="form-group mt-5">
+            <div class="pb-2 label-custom">Beds: </div>
+
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn active">
+                    <input type="radio" name="options" id="option1" autocomplete="off" checked> Studio
+                </label>
+                <label class="btn">
+                    <input type="radio" name="options" id="option2" autocomplete="off"> 1
+                </label>
+                <label class="btn">
+                    <input type="radio" name="options" id="option3" autocomplete="off"> 2
+                </label>
+                <label class="btn">
+                    <input type="radio" name="options" id="option4" autocomplete="off"> 3
+                </label>
+                <label class="btn">
+                    <input type="radio" name="options" id="option5" autocomplete="off"> 5
+                </label>
+                <label class="btn">
+                    <input type="radio" name="options" id="option6" autocomplete="off"> 6
+                </label>
+            </div>
+        </div>
+
+        <!--category-->
+        <div class="form-group mt-5">
+            <div class="pb-2 label-custom">Category: </div>
+
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn active">
+                    <input type="radio" name="options" id="category1" autocomplete="off" checked> Studio
+                </label>
+                <label class="btn">
+                    <input type="radio" name="options" id="category2" autocomplete="off"> Apartment
+                </label>
+                <label class="btn">
+                    <input type="radio" name="options" id="category3" autocomplete="off"> Restaurant
+                </label>
+                <label class="btn">
+                    <input type="radio" name="options" id="category4" autocomplete="off"> Big
+                </label>
+            </div>
+        </div>
+
+        <!--furniture-->
+        <div class="form-group mt-5">
+            <div class="pb-2 label-custom">Furniture: </div>
+
+            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                <label class="btn active">
+                    <input type="radio" name="options" id="furniture1" autocomplete="off" checked> Unfurnished
+                </label>
+                <label class="btn">
+                    <input type="radio" name="options" id="furniture2" autocomplete="off"> Furnished
+                </label>
+                <label class="btn">
+                    <input type="radio" name="options" id="furniture3" autocomplete="off"> Partially Furnished
+                </label>
+            </div>
+        </div>
+
+        <!--price-->
+        <div class="form-row mt-5">
+            <div class="form-group col-12">
+                <div class="label-custom">Price</div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="min-price" class="fs-16">Min</label>
+                <input type="number" class="form-control" id="min-price" placeholder="$0">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="max-price" class="fs-16">Max</label>
+                <input type="number" class="form-control" id="max-price" placeholder="$70,00,000">
+            </div>
+        </div>
+
+        <!--price-->
+        <div class="form-row mt-5">
+            <div class="form-group col-12">
+                <div class="label-custom">Built Up Area</div>
+            </div>
+            <div class="form-group col-md-6">
+                <label for="min-price" class="fs-16">Min</label>
+                <input type="number" class="form-control" id="min-area" placeholder="0 sq. ft.">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="max-price" class="fs-16">Max</label>
+                <input type="number" class="form-control" id="max-area" placeholder="20,000 sq. ft.">
+            </div>
+        </div>
+        <!--end of fields-->
+        <div class="form-row mt-4">
+            <div class="form-group">
+                <input type="submit" value="Show Result" class="btn btn-primary font-weight-normal text-white px-4">
+            </div>
+            <div class="form-group">
+                <button class="close-form-filter btn btn-outline-secondary font-weight-normal text-dark px-3 ml-3">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </form>
+</section>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
